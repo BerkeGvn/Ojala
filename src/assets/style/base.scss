@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 *,
 *::before,
 *::after {
@@ -8,4 +9,9 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--oj-background-color);
+  font-family: var(--font-family);
 }
