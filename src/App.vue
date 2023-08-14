@@ -1,20 +1,11 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/AboutUs">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
+  <BaseNavbar></BaseNavbar>
   <RouterView />
 </template>
+
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+import BaseNavbar from './components/nav/BaseNavbar.vue'
+</script>
 
 <style scoped></style>
