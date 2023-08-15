@@ -31,6 +31,7 @@
 @import '../../assets/style/variables.scss';
 .navbar {
   position: fixed;
+  z-index: 99;
   top: 0;
   width: 100%;
   background-color: var(--oj-background-color);

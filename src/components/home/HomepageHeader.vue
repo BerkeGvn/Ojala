@@ -3,7 +3,9 @@
     <h1 class="header-h1">OJALA</h1>
     <div class="header-sub">
       <h2 class="header-sub-h2">CREATING COMFORT, UNITING STYLE: YOUR HOME, ELEVATED.</h2>
-      <button>Explore now!</button>
+      <div class="header-sub-button">
+        <BaseButton :route="'/AboutUs'">Explore now!</BaseButton>
+      </div>
     </div>
   </header>
 </template>
@@ -22,6 +24,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
+  margin-top: 2rem;
   &-h1 {
     text-transform: uppercase;
     font-size: var(--oj-h0-size);
@@ -34,10 +37,10 @@
     padding-bottom: 8rem;
     &-h2 {
       text-transform: uppercase;
-      font-size: var(--oj-h7-size);
+      font-size: var(--oj-h8-size);
       width: 80%;
     }
-    & button {
+    &-button {
       align-self: center;
     }
   }
