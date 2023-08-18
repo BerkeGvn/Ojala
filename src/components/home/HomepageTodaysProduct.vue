@@ -3,7 +3,13 @@
     <h3 class="today-product-header">TODAY’S PRODUCT</h3>
     <div class="today-product-container">
       <div class="today-product-container-background-img">
-        <img src="../../assets/images/home-today-background.jpg" alt="" />
+        <picture>
+          <source srcset="../../assets/images/home-header-small.jpg" media="(min-width:900px)" />
+          <img
+            src="../../assets/images/home-today-background.jpg"
+            alt="picture of a black chair for a background image"
+          />
+        </picture>
       </div>
       <div class="today-product-container-sale">
         <div class="today-product-container-sale-div">
@@ -18,12 +24,18 @@
           </div>
         </div>
       </div>
-      <div class="today-product-container-item"></div>
+      <div class="today-product-container-item">
+        <ProductCard :product="store.TodaysProduct"></ProductCard>
+      </div>
     </div>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useProductsStore } from '@/stores/products'
+
+const store = useProductsStore()
+</script>
 
 <style lang="scss" scoped>
 @import '../../assets/style/variables.scss';
@@ -50,7 +62,11 @@
         display: block;
         height: 110%;
         // to center the image in container
-        margin-left: -30%;
+        position: absolute;
+        z-index: -2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
     &-sale {
@@ -62,9 +78,9 @@
       }
     }
     &-item {
-      height: 10rem;
-      width: 10rem;
-      background-color: var(--oj-background-color-1);
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 2rem;
     }
   }
 }
