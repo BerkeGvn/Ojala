@@ -11,20 +11,44 @@ export const useProductsStore = defineStore('products', () => {
         id: 'c1',
         images: [
           '/src/assets/images/products/chairs/duva-chair-1-small.png',
-          '/src/assets/images/products/chairs/duva-chair-1-small.png'
+          '/src/assets/images/products/chairs/duva-chair-2-medium.png'
         ]
       },
       {
         name: 'Dolden Chair',
         price: 132.0,
         id: 'c2',
-        images: ['/src/assets/images/products/chairs/dolden-chair-1-small.png', 'sf']
+        images: [
+          '/src/assets/images/products/chairs/dolden-chair-1-small.png',
+          '/src/assets/images/products/chairs/dolden-chair-2-medium.png'
+        ]
       },
       {
         name: 'Tuscan Chair',
         price: 114.0,
-        id: 'c2',
-        images: ['/src/assets/images/products/chairs/tuscan-chair-1-small.png', 'sf']
+        id: 'c3',
+        images: [
+          '/src/assets/images/products/chairs/tuscan-chair-1-small.png',
+          '/src/assets/images/products/chairs/tuscan-chair-2-medium.png'
+        ]
+      },
+      {
+        name: 'Baer Chair',
+        price: 102.0,
+        id: 'c4',
+        images: [
+          '/src/assets/images/products/chairs/baer-chair-1-small.png',
+          '/src/assets/images/products/chairs/baer-chair-2-medium.png'
+        ]
+      },
+      {
+        name: 'Folka Chair',
+        price: 121.0,
+        id: 'c4',
+        images: [
+          '/src/assets/images/products/chairs/folka-chair-1-small.png',
+          '/src/assets/images/products/chairs/folka-chair-2-medium.png'
+        ]
       }
     ],
     tables: [],

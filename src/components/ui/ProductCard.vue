@@ -39,15 +39,20 @@ const props = defineProps({
   background-color: var(--oj-background-color-1);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 2rem;
   border-radius: 5px;
+  height: 100%;
+  width: 100%;
   &-img {
     display: flex;
     align-items: center;
     justify-content: center;
     & img {
-      width: 80%;
-      height: 800%;
+      // rewrite with screen size
+      width: 20rem;
+      height: 20rem;
+      object-fit: contain;
     }
   }
   &-details {
