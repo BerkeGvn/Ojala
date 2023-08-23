@@ -25,8 +25,21 @@ const store = useProductsStore()
 @import '../../assets/style/variables.scss';
 .featured-products {
   padding: 2rem;
+  overflow: hidden;
   &-header {
     font-size: var(--oj-h4-size);
   }
+}
+
+ul {
+  display: flex;
+  gap: 2rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 30rem;
+}
+li {
+  height: 30rem;
+  min-width: 30rem;
 }
 </style>

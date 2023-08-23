@@ -78,7 +78,7 @@ const store = useProductsStore()
       }
     }
     &-item {
-      width: 80%;
+      width: 30rem;
       margin: 0 auto;
       margin-top: 2rem;
     }
@@ -102,7 +102,6 @@ const store = useProductsStore()
   }
 }
 
-/* use this one to move from right to left direction */
 @keyframes move-right-to-left {
   from {
     transform: translateX(0);
