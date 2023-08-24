@@ -3,11 +3,7 @@
     <h3 class="featured-products-header">TODAY’S PRODUCT</h3>
     <div class="featured-products-list-container">
       <ul class="featured-products-list">
-        <li
-          class="featured-products-list-item"
-          v-for="(item, index) in store.products.chairs"
-          :key="index"
-        >
+        <li class="featured-products-list-item" v-for="item in featuredProducts" :key="item.id">
           <ProductCard :product="item"></ProductCard>
         </li>
       </ul>
@@ -19,6 +15,7 @@
 import { useProductsStore } from '@/stores/products'
 
 const store = useProductsStore()
+const featuredProducts = store.featuredProducts
 </script>
 
 <style lang="scss" scoped>

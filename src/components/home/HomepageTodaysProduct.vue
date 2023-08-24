@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="today-product-container-item">
-        <ProductCard :product="store.TodaysProduct"></ProductCard>
+        <ProductCard :product="todaysProduct"></ProductCard>
       </div>
     </div>
   </section>
@@ -35,6 +35,7 @@
 import { useProductsStore } from '@/stores/products'
 
 const store = useProductsStore()
+const todaysProduct = store.todaysProduct
 </script>
 
 <style lang="scss" scoped>
