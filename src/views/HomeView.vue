@@ -4,6 +4,7 @@
   <HomepageTodaysProduct></HomepageTodaysProduct>
   <HomepageFeatured></HomepageFeatured>
   <HomepageCategories></HomepageCategories>
+  <SubForm></SubForm>
 </template>
 
 <script setup lang="ts">
@@ -12,6 +13,7 @@ import HomepageAbout from '@/components/home/HomepageAbout.vue'
 import HomepageTodaysProduct from '@/components/home/HomepageTodaysProduct.vue'
 import HomepageFeatured from '@/components/home/HomepageFeatured.vue'
 import HomepageCategories from '@/components/home/HomepageCategories.vue'
+import SubForm from '@/components/ui/SubForm.vue'
 </script>
 
 <style scoped></style>
