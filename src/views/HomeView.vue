@@ -5,6 +5,7 @@
   <HomepageFeatured></HomepageFeatured>
   <HomepageCategories></HomepageCategories>
   <SubForm></SubForm>
+  <BaseFooter></BaseFooter>
 </template>
 
 <script setup lang="ts">
