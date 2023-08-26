@@ -3,7 +3,9 @@
     <div class="categories">
       <RouterLink to="/" class="categories-container">
         <div class="categories-container-img">
-          <img src="../../assets/images/home-chair-shop.png" alt="" />
+          <div class="img-1">
+            <img src="../../assets/images/home-chair-shop.png" alt="" />
+          </div>
         </div>
         <div class="categories-container-text categories-container-text-right">
           <h3>Chairs</h3>
@@ -19,7 +21,7 @@
       </RouterLink>
       <RouterLink to="/" class="categories-container">
         <div class="categories-container-img">
-          <img src="../../assets/images/home-table-shop.png" alt="" />
+          <div class="img-2"><img src="../../assets/images/home-table-shop.png" alt="" /></div>
         </div>
         <div class="categories-container-text categories-container-text-right">
           <h3>Tables</h3>
@@ -35,7 +37,7 @@
       </RouterLink>
       <RouterLink to="/" class="categories-container">
         <div class="categories-container-img">
-          <img src="../../assets/images/home-sofa-shop.png" alt="" />
+          <div class="img-3"><img src="../../assets/images/home-sofa-shop.png" alt="" /></div>
         </div>
         <div class="categories-container-text categories-container-text-left">
           <h3>Sofas</h3>
@@ -51,7 +53,7 @@
       </RouterLink>
       <RouterLink to="/" class="categories-container">
         <div class="categories-container-img">
-          <img src="../../assets/images/home-cabinet-shop.png" alt="" />
+          <div class="img-4"><img src="../../assets/images/home-cabinet-shop.png" alt="" /></div>
         </div>
         <div class="categories-container-text categories-container-text-left">
           <h3>Cabinets</h3>
@@ -69,7 +71,13 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { animate } from '@/composables/useAnimationHandler'
+animate.backgroundImage('.img-1', '.img-1', -10, 1.2)
+animate.backgroundImage('.img-2', '.img-2', -10, 1.2)
+animate.backgroundImage('.img-3', '.img-3', -10, 1.2)
+animate.backgroundImage('.img-4', '.img-4', -10, 1.2)
+</script>
 
 <style scoped lang="scss">
 @import '../../assets/style/variables.scss';

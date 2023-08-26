@@ -19,6 +19,7 @@ body {
   font-family: var(--font-family);
   color: var(--oj-text-color);
   padding-top: 2rem;
+  scroll-behavior: smooth;
 }
 
 ul,
@@ -30,4 +31,21 @@ a,
 a:visited {
   text-decoration: none;
   color: inherit;
+}
+
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }

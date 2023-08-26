@@ -4,7 +4,10 @@
     <div class="today-product-container">
       <div class="today-product-container-background-img">
         <picture>
-          <source srcset="../../assets/images/home-header-small.jpg" media="(min-width:900px)" />
+          <source
+            srcset="../../assets/images/home-today-background.jpg"
+            media="(min-width:900px)"
+          />
           <img
             src="../../assets/images/home-today-background.jpg"
             alt="picture of a black chair for a background image"
@@ -33,9 +36,17 @@
 
 <script setup lang="ts">
 import { useProductsStore } from '@/stores/products'
+import { animate } from '@/composables/useAnimationHandler'
 
 const store = useProductsStore()
 const todaysProduct = store.todaysProduct
+
+animate.backgroundImage(
+  '.today-product-container-background-img',
+  '.today-product-container-background-img',
+  -180,
+  1.2
+)
 </script>
 
 <style lang="scss" scoped>
@@ -51,13 +62,14 @@ const todaysProduct = store.todaysProduct
     height: 80vh;
     position: relative;
     overflow: hidden;
+    //need to add width something like 70% in wide screen and margin auto
     &-background-img {
       position: absolute;
       top: 0;
       left: 0;
       z-index: -2;
       overflow: hidden;
-      height: 100%;
+      height: 120%;
       width: 100%;
       & img {
         display: block;
