@@ -1,7 +1,7 @@
 <template>
   <RouterLink to="/" class="product-card">
     <div class="product-card-img">
-      <img :src="props.product.images[0]" alt="" />
+      <img :src="props.product.images[0]" alt="" draggable="false" />
     </div>
     <div class="product-card-details">
       <div class="product-card-details-container">
