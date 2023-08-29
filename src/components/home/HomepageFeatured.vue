@@ -13,9 +13,11 @@
 
 <script setup lang="ts">
 import { useProductsStore } from '@/stores/products'
-
+import { animate } from '@/composables/useAnimationHandler'
 const store = useProductsStore()
 const featuredProducts = store.featuredProducts
+
+animate.moveCards('.featured-products-list-item', '.featured-products-list')
 </script>
 
 <style lang="scss" scoped>
@@ -31,7 +33,7 @@ const featuredProducts = store.featuredProducts
 ul {
   display: flex;
   gap: 2rem;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   height: 30rem;
 }
