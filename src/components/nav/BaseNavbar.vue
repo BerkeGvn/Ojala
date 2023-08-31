@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <ul class="navbar-list">
-      <li class="navbar-list-el navbar-list-el-menu">
+      <li class="navbar-list-el navbar-list-el-menu" @click="toggleMenu">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
           <path
             fill="#4a4a48"
@@ -10,7 +10,7 @@
         </svg>
       </li>
       <li class="navbar-list-el navbar-list-el-ojala"><a href="#">ojala</a></li>
-      <li class="navbar-list-el navbar-list-el-cart">
+      <li class="navbar-list-el navbar-list-el-cart" v-if="!menuStatus">
         <a class="navbar-list-el-cart-link" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512">
             <path
@@ -21,14 +21,35 @@
           Cart(0)
         </a>
       </li>
+      <li class="navbar-list-el navbar-list-el-close" v-else @click="toggleMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20">
+          <path
+            fill="#4a4a48"
+            d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07zm1.41-1.41A8 8 0 1 0 15.66 4.34A8 8 0 0 0 4.34 15.66zm9.9-8.49L11.41 10l2.83 2.83l-1.41 1.41L10 11.41l-2.83 2.83l-1.41-1.41L8.59 10L5.76 7.17l1.41-1.41L10 8.59l2.83-2.83l1.41 1.41z"
+          />
+        </svg>
+        <span>Close</span>
+      </li>
     </ul>
   </nav>
+
+  <BaseMenu :status="menuStatus"></BaseMenu>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BaseMenu from '../ui/BaseMenu.vue'
+import { ref } from 'vue'
 
-<style scoped lang="scss">
+const menuStatus = ref(false)
+
+function toggleMenu() {
+  menuStatus.value = !menuStatus.value
+}
+</script>
+
+<style lang="scss">
 @import '../../assets/style/variables.scss';
+
 .navbar {
   position: fixed;
   z-index: 99;
@@ -66,6 +87,16 @@
           font-size: var(--oj-p5-size);
           text-transform: uppercase;
         }
+      }
+      &-close {
+        font-size: var(--oj-p5-size);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
+        min-width: -webkit-min-content;
+        gap: 0.2rem;
+        text-transform: uppercase;
       }
     }
   }
