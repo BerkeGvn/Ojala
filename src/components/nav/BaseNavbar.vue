@@ -33,7 +33,7 @@
     </ul>
   </nav>
 
-  <BaseMenu :status="menuStatus"></BaseMenu>
+  <BaseMenu :status="menuStatus" @closeMenu="closeMenu"></BaseMenu>
 </template>
 
 <script setup lang="ts">
@@ -44,6 +44,10 @@ const menuStatus = ref(false)
 
 function toggleMenu() {
   menuStatus.value = !menuStatus.value
+}
+
+function closeMenu() {
+  menuStatus.value = false
 }
 </script>
 
@@ -57,6 +61,9 @@ function toggleMenu() {
   width: 100%;
   background-color: var(--oj-background-color);
   padding: 0.5rem 0;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
   &-list {
     display: flex;
     margin: 0;
