@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <section>Shop view</section>
 </template>
 
 <script setup lang="ts"></script>

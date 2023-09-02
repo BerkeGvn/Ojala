@@ -4,7 +4,7 @@
     <div class="header-sub">
       <h2 class="header-sub-h2">CREATING COMFORT, UNITING STYLE: YOUR HOME, ELEVATED.</h2>
       <div class="header-sub-button">
-        <BaseButton :route="'/AboutUs'">Explore now!</BaseButton>
+        <BaseButton :route="'/shop'">Explore now!</BaseButton>
       </div>
     </div>
   </header>

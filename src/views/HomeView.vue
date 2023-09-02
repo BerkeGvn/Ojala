@@ -1,11 +1,13 @@
 <template>
-  <HomepageHeader></HomepageHeader>
-  <HomepageAbout></HomepageAbout>
-  <HomepageTodaysProduct></HomepageTodaysProduct>
-  <HomepageFeatured></HomepageFeatured>
-  <HomepageCategories></HomepageCategories>
-  <SubForm></SubForm>
-  <BaseFooter></BaseFooter>
+  <main class="home">
+    <HomepageHeader></HomepageHeader>
+    <HomepageAbout></HomepageAbout>
+    <HomepageTodaysProduct></HomepageTodaysProduct>
+    <HomepageFeatured></HomepageFeatured>
+    <HomepageCategories></HomepageCategories>
+    <SubForm></SubForm>
+    <BaseFooter></BaseFooter>
+  </main>
 </template>
 
 <script setup lang="ts">
