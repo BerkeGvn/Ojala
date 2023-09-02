@@ -9,7 +9,9 @@
           />
         </svg>
       </li>
-      <li class="navbar-list-el navbar-list-el-ojala"><a href="#">ojala</a></li>
+      <li class="navbar-list-el navbar-list-el-ojala">
+        <RouterLink to="/" class="categories-container">ojala</RouterLink>
+      </li>
       <li class="navbar-list-el navbar-list-el-cart" v-if="!menuStatus">
         <a class="navbar-list-el-cart-link" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512">

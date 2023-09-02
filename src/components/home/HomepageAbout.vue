@@ -27,7 +27,7 @@
         At Ojala, we blend style and comfort to curate the perfect furniture pieces for your home.
       </p>
       <div class="home-about-text-button">
-        <BaseButton :route="'/AboutUs'">About Us</BaseButton>
+        <BaseButton :route="'/about'">About Us</BaseButton>
       </div>
     </div>
   </section>
