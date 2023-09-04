@@ -38,7 +38,7 @@ const props = defineProps({
     default: 'link'
   },
   route: {
-    type: String,
+    type: [String, Object],
     required: true
   },
   color: {

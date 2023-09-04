@@ -4,7 +4,15 @@
     <div class="header-sub">
       <h2 class="header-sub-h2">CREATING COMFORT, UNITING STYLE: YOUR HOME, ELEVATED.</h2>
       <div class="header-sub-button">
-        <BaseButton :route="'/shop'">Explore now!</BaseButton>
+        <BaseButton
+          :route="{
+            name: 'shop',
+            query: {
+              query: 'all'
+            }
+          }"
+          >Explore now!</BaseButton
+        >
       </div>
     </div>
   </header>

@@ -1,7 +1,15 @@
 <template>
   <section class="categories-section">
     <div class="categories">
-      <RouterLink to="/" class="categories-container">
+      <RouterLink
+        :to="{
+          name: 'shop',
+          query: {
+            query: 'chairs'
+          }
+        }"
+        class="categories-container"
+      >
         <div class="categories-container-img">
           <div class="img-1">
             <img src="../../assets/images/home-chair-shop.png" alt="" />
@@ -19,7 +27,15 @@
           </svg>
         </div>
       </RouterLink>
-      <RouterLink to="/" class="categories-container">
+      <RouterLink
+        :to="{
+          name: 'shop',
+          query: {
+            query: 'tables'
+          }
+        }"
+        class="categories-container"
+      >
         <div class="categories-container-img">
           <div class="img-2"><img src="../../assets/images/home-table-shop.png" alt="" /></div>
         </div>
@@ -35,7 +51,15 @@
           </svg>
         </div>
       </RouterLink>
-      <RouterLink to="/" class="categories-container">
+      <RouterLink
+        :to="{
+          name: 'shop',
+          query: {
+            query: 'sofas'
+          }
+        }"
+        class="categories-container"
+      >
         <div class="categories-container-img">
           <div class="img-3"><img src="../../assets/images/home-sofa-shop.png" alt="" /></div>
         </div>
@@ -51,7 +75,15 @@
           </svg>
         </div>
       </RouterLink>
-      <RouterLink to="/" class="categories-container">
+      <RouterLink
+        :to="{
+          name: 'shop',
+          query: {
+            query: 'cabinets'
+          }
+        }"
+        class="categories-container"
+      >
         <div class="categories-container-img">
           <div class="img-4"><img src="../../assets/images/home-cabinet-shop.png" alt="" /></div>
         </div>

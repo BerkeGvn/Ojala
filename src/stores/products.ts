@@ -1,6 +1,6 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
-import type { AllProducts } from '../types/types'
+import type { AllProducts, Product } from '../types/types'
 
 export const useProductsStore = defineStore('products', () => {
   const products = ref<AllProducts>({
@@ -44,7 +44,7 @@ export const useProductsStore = defineStore('products', () => {
       {
         name: 'Folka Chair',
         price: 121.0,
-        id: 'c4',
+        id: 'c5',
         images: [
           '/src/assets/images/products/chairs/folka-chair-1-small.png',
           '/src/assets/images/products/chairs/folka-chair-2-medium.jpg'
@@ -136,7 +136,7 @@ export const useProductsStore = defineStore('products', () => {
   })
 
   const featuredProducts = computed(() => {
-    const featuredProductsArr = []
+    const featuredProductsArr: Product[] = []
     featuredProductsArr.push(
       products.value.chairs[2],
       products.value.chairs[3],
@@ -149,5 +149,22 @@ export const useProductsStore = defineStore('products', () => {
     return featuredProductsArr
   })
 
-  return { products, todaysProduct, featuredProducts }
+  const allProducts = computed(() => {
+    const allProductsArr: Product[] = []
+    let product: keyof AllProducts
+    for (product in products.value) {
+      products.value[product].map((i: Product) => allProductsArr.push(i))
+    }
+    return allProductsArr
+  })
+
+  function filteredProducts(type: 'chairs' | 'tables' | 'sofas' | 'cabinets' | 'all') {
+    if (type === 'all' || type === undefined) {
+      return allProducts.value
+    } else {
+      return products.value[type]
+    }
+  }
+
+  return { products, todaysProduct, featuredProducts, allProducts, filteredProducts }
 })
