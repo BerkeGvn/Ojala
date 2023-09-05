@@ -1,7 +1,9 @@
 <template>
   <section class="products">
     <ProductFilter :query="queryType" @update-product="updateProduct"></ProductFilter>
-    <span> {{ queryType }} </span>
+    <span class="products-type-header">
+      {{ queryType }} <span class="products-type-header-count">{{ listedProducts.length }}</span>
+    </span>
     <ul class="products-list">
       <li class="products-list-el" v-for="product in listedProducts" :key="product.id">
         <ProductCard :product="product"></ProductCard>
@@ -34,21 +36,7 @@ if (
 }
 
 listedProducts.value = store.filteredProducts(queryType.value)
-/* let queryType = ref(route.query.query)
-let listedProducts = ref()
 
-if (
-  queryType.value === 'chairs' ||
-  queryType.value === 'tables' ||
-  queryType.value === 'sofas' ||
-  queryType.value === 'cabinets' ||
-  queryType.value === 'all'
-) {
-  listedProducts.value = store.filteredProducts(queryType.value)
-} else {
-  listedProducts.value = store.filteredProducts('all')
-}
- */
 function updateProduct(type: 'chairs' | 'tables' | 'sofas' | 'cabinets' | 'all') {
   listedProducts.value = store.filteredProducts(type)
   queryType.value = type
@@ -56,8 +44,29 @@ function updateProduct(type: 'chairs' | 'tables' | 'sofas' | 'cabinets' | 'all')
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/style/variables.scss';
 .products {
   margin-bottom: 2rem;
+  &-type-header {
+    display: block;
+    font-size: var(--oj-h6-size);
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    &-count {
+      border-radius: 50%;
+      font-size: var(--oj-p3-size);
+      background-color: var(--oj-primary);
+      color: var(--oj-text-color-0);
+      width: 3.2rem;
+      height: 3.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   &-list {
     display: flex;
     flex-direction: column;
