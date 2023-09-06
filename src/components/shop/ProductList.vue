@@ -1,11 +1,20 @@
 <template>
   <section class="products">
-    <ProductFilter :query="queryType" @update-product="updateProduct"></ProductFilter>
+    <ProductFilter
+      :query="queryType"
+      @update-product="updateProduct"
+      @search-item="searchItem"
+    ></ProductFilter>
     <span class="products-type-header">
-      {{ queryType }} <span class="products-type-header-count">{{ listedProducts.length }}</span>
+      {{ queryType }}
+      <span class="products-type-header-count">{{ listedProducts.length }}</span>
     </span>
     <ul class="products-list">
-      <li class="products-list-el" v-for="product in listedProducts" :key="product.id">
+      <span class="products-list-error" v-if="listedProducts <= 0">
+        <span class="products-list-error-block"> Sorry,</span> it seems like there are no products
+        matching your search keyword.</span
+      >
+      <li v-else class="products-list-el" v-for="product in listedProducts" :key="product.id">
         <ProductCard :product="product"></ProductCard>
       </li>
     </ul>
@@ -21,9 +30,10 @@ import ProductFilter from './ProductFilter.vue'
 const store = useProductsStore()
 const route = useRoute()
 
-let queryType = ref()
-let listedProducts = ref()
+const queryType = ref()
+const listedProducts = ref()
 
+// To make sure query is a product type, if not all products are shown
 if (
   route.query.query === 'chairs' ||
   route.query.query === 'tables' ||
@@ -40,6 +50,15 @@ listedProducts.value = store.filteredProducts(queryType.value)
 function updateProduct(type: 'chairs' | 'tables' | 'sofas' | 'cabinets' | 'all') {
   listedProducts.value = store.filteredProducts(type)
   queryType.value = type
+}
+
+// with search input, this func filter products with keyword dynamically
+function searchItem(keyword: string) {
+  const items = store.filteredProducts(queryType.value)
+  let item = items.filter((i) => {
+    return i.name.toLocaleLowerCase().includes(keyword)
+  })
+  listedProducts.value = item
 }
 </script>
 
@@ -71,6 +90,16 @@ function updateProduct(type: 'chairs' | 'tables' | 'sofas' | 'cabinets' | 'all')
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    &-error {
+      display: block;
+      text-align: center;
+      font-size: var(--oj-h9-size);
+      margin-top: 2rem;
+      margin-bottom: 10rem;
+      &-block {
+        display: block;
+      }
+    }
   }
 }
 </style>

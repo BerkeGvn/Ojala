@@ -64,6 +64,10 @@
         <label class="product-filter-button-label" for="cabinets">Cabinets</label>
       </div>
     </div>
+    <div class="product-filter-search">
+      <label for="search"></label>
+      <input type="text" id="search" placeholder="Search" v-model="search" @input="searchItem" />
+    </div>
   </div>
 </template>
 
@@ -71,16 +75,20 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
+const emit = defineEmits(['updateProduct', 'searchItem'])
+
 const props = defineProps(['query'])
-
 const router = useRouter()
-
-const emit = defineEmits(['updateProduct'])
 const filter = ref(props.query)
+const search = ref('')
 
 function updateProducts() {
   router.replace({ query: { query: filter.value } })
   emit('updateProduct', filter.value)
+}
+
+function searchItem() {
+  emit('searchItem', search.value)
 }
 </script>
 

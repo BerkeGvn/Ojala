@@ -166,5 +166,19 @@ export const useProductsStore = defineStore('products', () => {
     }
   }
 
-  return { products, todaysProduct, featuredProducts, allProducts, filteredProducts }
+  function findSpecificProduct(name: string) {
+    const product = allProducts.value.find((product) => {
+      return product.name.toLowerCase().replace(/ /g, '-') === name
+    })
+    return product
+  }
+
+  return {
+    products,
+    todaysProduct,
+    featuredProducts,
+    allProducts,
+    filteredProducts,
+    findSpecificProduct
+  }
 })
