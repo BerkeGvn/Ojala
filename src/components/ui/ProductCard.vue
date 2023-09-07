@@ -1,5 +1,11 @@
 <template>
-  <RouterLink to="/" class="product-card">
+  <RouterLink
+    :to="{
+      name: 'product',
+      params: { productName: formatRouteParam(props.product.name) }
+    }"
+    class="product-card"
+  >
     <div class="product-card-img">
       <img :src="props.product.images[0]" alt="" draggable="false" />
     </div>
@@ -31,6 +37,10 @@ const props = defineProps({
     type: Object as PropType<Product>
   }
 })
+
+function formatRouteParam(name: string) {
+  return name.toLowerCase().replace(/ /g, '-')
+}
 </script>
 
 <style lang="scss" scoped>

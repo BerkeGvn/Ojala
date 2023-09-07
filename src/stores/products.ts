@@ -69,6 +69,15 @@ export const useProductsStore = defineStore('products', () => {
           '/src/assets/images/products/tables/kosu-table-1-small.png',
           '/src/assets/images/products/tables/kosu-table-2-medium.jpg'
         ]
+      },
+      {
+        name: 'Olak Table',
+        price: 328.0,
+        id: 't3',
+        images: [
+          '/src/assets/images/products/tables/olak-table-1-small.png',
+          '/src/assets/images/products/tables/olak-table-2-medium.jpg'
+        ]
       }
     ],
     sofas: [
@@ -166,5 +175,19 @@ export const useProductsStore = defineStore('products', () => {
     }
   }
 
-  return { products, todaysProduct, featuredProducts, allProducts, filteredProducts }
+  function findSpecificProduct(name: string) {
+    const product = allProducts.value.find((product) => {
+      return product.name.toLowerCase().replace(/ /g, '-') === name
+    })
+    return product
+  }
+
+  return {
+    products,
+    todaysProduct,
+    featuredProducts,
+    allProducts,
+    filteredProducts,
+    findSpecificProduct
+  }
 })

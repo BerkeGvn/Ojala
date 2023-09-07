@@ -26,7 +26,7 @@
   background-image: url(../../assets/images/home-header-small.jpg);
   background-position: center;
   background-size: cover;
-  height: 90vh;
+  height: 95vh;
   color: var(--oj-text-color-0);
   display: flex;
   flex-direction: column;
