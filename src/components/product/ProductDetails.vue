@@ -23,7 +23,7 @@
             +
           </button>
         </div>
-        <BaseButton :type="'button'" :route="'/'">Add to card</BaseButton>
+        <BaseButton @click="addProductToCart" :type="'button'" :route="'/'">Add to card</BaseButton>
       </div>
     </div>
   </div>
@@ -33,12 +33,14 @@
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useProductsStore } from '@/stores/products'
+import { useCartStore } from '@/stores/cart'
 import type { Product } from '@/types/types'
 import ProductImgSlider from './ProductImgSlider.vue'
 import BaseButton from '../ui/BaseButton.vue'
 const route = useRoute()
-const store = useProductsStore()
 const router = useRouter()
+const productStore = useProductsStore()
+const cartStore = useCartStore()
 
 const productRoute = route.params.productName
 const product = ref<Product>()
@@ -46,7 +48,7 @@ const prodNum = ref(1)
 
 onMounted(() => {
   if (typeof productRoute === 'string') {
-    product.value = store.findSpecificProduct(productRoute)
+    product.value = productStore.findSpecificProduct(productRoute)
   }
   if (typeof product.value === 'undefined') {
     router.replace('/shop')
@@ -60,6 +62,14 @@ function decreaseProdNum() {
     prodNum.value = 1
   } else {
     prodNum.value -= 1
+  }
+}
+
+function addProductToCart() {
+  if (product.value) {
+    cartStore.addToCart(product.value)
+  } else {
+    console.error('An error occured while adding item to cart. :(')
   }
 }
 </script>

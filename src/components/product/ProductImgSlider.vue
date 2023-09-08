@@ -18,7 +18,6 @@ import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 
 const props = defineProps(['images'])
-console.log(props.images)
 </script>
 
 <style>

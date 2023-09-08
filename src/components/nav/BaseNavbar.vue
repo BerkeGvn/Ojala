@@ -12,7 +12,7 @@
       <li class="navbar-list-el navbar-list-el-ojala">
         <RouterLink to="/" class="categories-container">ojala</RouterLink>
       </li>
-      <li class="navbar-list-el navbar-list-el-cart" v-if="!menuStatus">
+      <li class="navbar-list-el navbar-list-el-cart" v-if="!menuStatus" @click="toggleCart">
         <a class="navbar-list-el-cart-link" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512">
             <path
@@ -20,7 +20,7 @@
               d="M160 96.039v32h304v63.345l-35.5 112.655H149.932L109.932 16H16v32h66.068l40 288.039h329.9L496 196.306V96.039H160zm16.984 272.305a64.073 64.073 0 0 0-64 64a64 64 0 0 0 128 0a64.072 64.072 0 0 0-64-64Zm0 96a32 32 0 1 1 32-32a32.038 32.038 0 0 1-32 32Zm224-96a64.073 64.073 0 0 0-64 64a64 64 0 0 0 128 0a64.072 64.072 0 0 0-64-64Zm0 96a32 32 0 1 1 32-32a32.038 32.038 0 0 1-32 32Z"
             />
           </svg>
-          Cart(0)
+          Carts({{ store.numberOfProductsInCart }})
         </a>
       </li>
       <li class="navbar-list-el navbar-list-el-close" v-else @click="toggleMenu">
@@ -34,18 +34,27 @@
       </li>
     </ul>
   </nav>
-
   <BaseMenu :status="menuStatus" @closeMenu="closeMenu"></BaseMenu>
+  <BaseCart v-if="cartStatus"></BaseCart>
 </template>
 
 <script setup lang="ts">
 import BaseMenu from '../ui/BaseMenu.vue'
 import { ref } from 'vue'
+import { useCartStore } from '@/stores/cart'
+import BaseCart from '../cart/BaseCart.vue'
 
 const menuStatus = ref(false)
+const cartStatus = ref(false)
+
+// to display how many products in the cart
+const store = useCartStore()
 
 function toggleMenu() {
   menuStatus.value = !menuStatus.value
+}
+function toggleCart() {
+  cartStatus.value = !cartStatus.value
 }
 
 function closeMenu() {
