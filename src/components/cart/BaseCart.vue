@@ -1,17 +1,32 @@
 <template>
   <div class="cart">
-    <span class="cart-header">Order Summary</span>
+    <div class="cart-header">
+      <span class="cart-header-text">Order Summary</span>
+      <button class="cart-header-cancel" @click="closeCart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
+          <path
+            fill="#4a4a48"
+            d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07zm1.41-1.41A8 8 0 1 0 15.66 4.34A8 8 0 0 0 4.34 15.66zm9.9-8.49L11.41 10l2.83 2.83l-1.41 1.41L10 11.41l-2.83 2.83l-1.41-1.41L8.59 10L5.76 7.17l1.41-1.41L10 8.59l2.83-2.83l1.41 1.41z"
+          />
+        </svg>
+      </button>
+    </div>
+
     <div class="cart-main">
       <ul class="cart-main-list">
-        <li class="cart-main-list-item" v-for="product in products" :key="product.id">
-          <CartCards :product="product"></CartCards>
+        <li
+          class="cart-main-list-item"
+          v-for="(product, index) in products"
+          :key="product.id + index"
+        >
+          <CartCards :product="product" @routeToLink="closeCart"></CartCards>
         </li>
       </ul>
     </div>
     <div class="cart-footer">
       <div class="cart-footer-total">
         <span class="cart-footer-total-tax">TOTAL INC. TAX</span>
-        <span class="cart-footer-total-price">$534.00</span>
+        <span class="cart-footer-total-price"> ${{ store.totalPrice }} </span>
       </div>
       <div class="cart-footer-button">
         <button>PROCEED TO CHECK OUT</button>
@@ -25,10 +40,14 @@ import { useCartStore } from '@/stores/cart'
 import { computed } from 'vue'
 import CartCards from './CartCards.vue'
 const store = useCartStore()
-
+const emit = defineEmits(['closeCart'])
 const products = computed(() => {
   return store.getAllProducts
 })
+
+function closeCart() {
+  emit('closeCart')
+}
 </script>
 
 <style lang="scss" scoped>
@@ -46,10 +65,27 @@ const products = computed(() => {
     font-size: var(--oj-h8-size);
     font-weight: 600;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 96%;
+    height: 6rem;
+    background-color: inherit;
+    &-text {
+      display: block;
+      flex: 1;
+    }
+    &-cancel {
+      background-color: inherit;
+      border: none;
+      margin-right: 2rem;
+    }
   }
   &-main {
     // footer is fixed so with this margin last product doesn't stay behind footer,
-    margin-bottom: 30%;
+    margin: 5rem 0;
     &-list {
       display: flex;
       flex-direction: column;

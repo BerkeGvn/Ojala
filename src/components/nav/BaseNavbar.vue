@@ -35,7 +35,7 @@
     </ul>
   </nav>
   <BaseMenu :status="menuStatus" @closeMenu="closeMenu"></BaseMenu>
-  <BaseCart v-if="cartStatus"></BaseCart>
+  <BaseCart v-if="cartStatus" @closeCart="closeCart"></BaseCart>
 </template>
 
 <script setup lang="ts">
@@ -59,6 +59,9 @@ function toggleCart() {
 
 function closeMenu() {
   menuStatus.value = false
+}
+function closeCart() {
+  cartStatus.value = false
 }
 </script>
 

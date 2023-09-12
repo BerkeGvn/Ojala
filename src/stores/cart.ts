@@ -13,10 +13,20 @@ export const useCartStore = defineStore('cart', () => {
     return cart.value.length
   })
 
+  const totalPrice = computed(() => {
+    let totalPrice = 0
+    cart.value.forEach((product) => {
+      totalPrice += product.price
+    })
+    return totalPrice
+  })
+
   function addToCart(product: Product) {
     cart.value.push(product)
-    console.log(cart.value)
   }
-
-  return { cart, numberOfProductsInCart, getAllProducts, addToCart }
+  function deleteProduct(productID: string) {
+    const selectedProduct = cart.value.findIndex((product) => product.id === productID)
+    cart.value.splice(selectedProduct, 1)
+  }
+  return { cart, numberOfProductsInCart, getAllProducts, totalPrice, addToCart, deleteProduct }
 })
