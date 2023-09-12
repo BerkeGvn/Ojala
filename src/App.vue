@@ -1,6 +1,6 @@
 <template>
   <BaseNavbar></BaseNavbar>
-  <RouterView />
+  <RouterView :key="$route.params[$route.meta.watchParam]" />
 </template>
 
 <script setup lang="ts">

@@ -23,7 +23,10 @@ const router = createRouter({
       path: '/product/:productName',
       name: 'product',
       component: () => import('../views/ProductView.vue'),
-      props: true
+      props: true,
+      meta: {
+        watchParam: 'productName'
+      }
     }
   ]
 })
