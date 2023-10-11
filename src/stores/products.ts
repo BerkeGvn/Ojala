@@ -7,8 +7,8 @@ export const useProductsStore = defineStore('products', () => {
     chairs: [
       {
         name: 'Duva Chair',
-        price: 154.0,
-        id: 'c1',
+        price: 154,
+        id: 'C35342',
         images: [
           '/src/assets/images/products/chairs/duva-chair-1-small.png',
           '/src/assets/images/products/chairs/duva-chair-2-medium.jpg'
@@ -16,8 +16,8 @@ export const useProductsStore = defineStore('products', () => {
       },
       {
         name: 'Dolden Chair',
-        price: 132.0,
-        id: 'c2',
+        price: 132,
+        id: 'C25422',
         images: [
           '/src/assets/images/products/chairs/dolden-chair-1-small.png',
           '/src/assets/images/products/chairs/dolden-chair-2-medium.jpg'
@@ -25,8 +25,8 @@ export const useProductsStore = defineStore('products', () => {
       },
       {
         name: 'Tuscan Chair',
-        price: 114.0,
-        id: 'c3',
+        price: 114,
+        id: 'C35624',
         images: [
           '/src/assets/images/products/chairs/tuscan-chair-1-small.png',
           '/src/assets/images/products/chairs/tuscan-chair-2-medium.jpg'
@@ -34,8 +34,8 @@ export const useProductsStore = defineStore('products', () => {
       },
       {
         name: 'Baer Chair',
-        price: 102.0,
-        id: 'c4',
+        price: 102,
+        id: 'C48565',
         images: [
           '/src/assets/images/products/chairs/baer-chair-1-small.png',
           '/src/assets/images/products/chairs/baer-chair-2-medium.jpg'
@@ -43,8 +43,8 @@ export const useProductsStore = defineStore('products', () => {
       },
       {
         name: 'Folka Chair',
-        price: 121.0,
-        id: 'c5',
+        price: 121.58,
+        id: 'C55876',
         images: [
           '/src/assets/images/products/chairs/folka-chair-1-small.png',
           '/src/assets/images/products/chairs/folka-chair-2-medium.jpg'
@@ -54,8 +54,8 @@ export const useProductsStore = defineStore('products', () => {
     tables: [
       {
         name: 'Jeko Table',
-        price: 265.0,
-        id: 't1',
+        price: 265.58,
+        id: 'T11464',
         images: [
           '/src/assets/images/products/tables/jeko-table-1-small.png',
           '/src/assets/images/products/tables/jeko-table-2-medium.jpg'
@@ -63,8 +63,8 @@ export const useProductsStore = defineStore('products', () => {
       },
       {
         name: 'Kosu Table',
-        price: 328.0,
-        id: 't2',
+        price: 328.58,
+        id: 'T24354',
         images: [
           '/src/assets/images/products/tables/kosu-table-1-small.png',
           '/src/assets/images/products/tables/kosu-table-2-medium.jpg'
@@ -72,8 +72,8 @@ export const useProductsStore = defineStore('products', () => {
       },
       {
         name: 'Olak Table',
-        price: 328.0,
-        id: 't3',
+        price: 328.58,
+        id: 'T37960',
         images: [
           '/src/assets/images/products/tables/olak-table-1-small.png',
           '/src/assets/images/products/tables/olak-table-2-medium.jpg'
@@ -83,8 +83,8 @@ export const useProductsStore = defineStore('products', () => {
     sofas: [
       {
         name: 'Bora Sofa',
-        price: 396.0,
-        id: 's1',
+        price: 396.58,
+        id: 'S16758',
         images: [
           '/src/assets/images/products/sofas/bora-sofa-1-small.png',
           '/src/assets/images/products/sofas/bora-sofa-2-medium.jpg'
@@ -92,8 +92,8 @@ export const useProductsStore = defineStore('products', () => {
       },
       {
         name: 'Forn Sofa',
-        price: 426.0,
-        id: 's2',
+        price: 426.58,
+        id: 'S22576',
         images: [
           '/src/assets/images/products/sofas/forn-sofa-1-small.png',
           '/src/assets/images/products/sofas/forn-sofa-2-medium.jpg'
@@ -101,8 +101,8 @@ export const useProductsStore = defineStore('products', () => {
       },
       {
         name: 'Mori Sofa',
-        price: 451.0,
-        id: 's3',
+        price: 451.58,
+        id: 'S36454',
         images: [
           '/src/assets/images/products/sofas/mori-sofa-1-small.png',
           '/src/assets/images/products/sofas/mori-sofa-2-medium.jpg'
@@ -112,8 +112,8 @@ export const useProductsStore = defineStore('products', () => {
     cabinets: [
       {
         name: 'Aris Cabinet',
-        price: 204.0,
-        id: 'ca1',
+        price: 204.58,
+        id: 'CA3231',
         images: [
           '/src/assets/images/products/cabinets/aris-cabinet-1-small.png',
           '/src/assets/images/products/cabinets/aris-cabinet-2-medium.jpg'
@@ -121,8 +121,8 @@ export const useProductsStore = defineStore('products', () => {
       },
       {
         name: 'Dolap Cabinet',
-        price: 274.0,
-        id: 'ca2',
+        price: 274.99,
+        id: 'CA6456',
         images: [
           '/src/assets/images/products/cabinets/dolap-cabinet-1-small.png',
           '/src/assets/images/products/cabinets/dolap-cabinet-2-medium.jpg'
@@ -130,8 +130,8 @@ export const useProductsStore = defineStore('products', () => {
       },
       {
         name: 'Kora Cabinet',
-        price: 196.0,
-        id: 'ca3',
+        price: 196.58,
+        id: 'CA3543',
         images: [
           '/src/assets/images/products/cabinets/kora-cabinet-1-small.png',
           '/src/assets/images/products/cabinets/kora-cabinet-2-medium.jpg'

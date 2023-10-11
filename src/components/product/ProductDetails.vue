@@ -4,7 +4,7 @@
     <div class="product-details">
       <div class="product-details-header">
         <p class="product-details-name">{{ product?.name }}</p>
-        <p class="product-details-name">${{ product?.price }}</p>
+        <p class="product-details-name">${{ product?.price.toFixed(2) }}</p>
       </div>
       <div class="product-details-main">
         Where sophistication meets comfort in perfect harmony. This sleek and contemporary chair

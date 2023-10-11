@@ -13,26 +13,28 @@
     </div>
 
     <div class="cart-main">
-      <ul class="cart-main-list">
-        <li
+      <li class="cart-main-list">
+        <CartCards
           class="cart-main-list-item"
           v-for="(product, index) in products"
           :key="product.id + index"
+          :product="product"
+          @routeToLink="closeCart"
         >
-          <CartCards :product="product" @routeToLink="closeCart"></CartCards>
-        </li>
-      </ul>
+        </CartCards>
+      </li>
     </div>
     <div class="cart-footer">
       <div class="cart-footer-total">
         <span class="cart-footer-total-tax">TOTAL INC. TAX</span>
-        <span class="cart-footer-total-price"> ${{ store.totalPrice }} </span>
+        <span class="cart-footer-total-price"> ${{ store.totalPrice.toFixed(2) }} </span>
       </div>
       <div class="cart-footer-button">
         <button>PROCEED TO CHECK OUT</button>
       </div>
     </div>
   </div>
+  <div class="cart-overlay"></div>
 </template>
 
 <script setup lang="ts">
@@ -61,6 +63,7 @@ function closeCart() {
   background-color: var(--oj-background-color);
   padding: 2rem;
   overflow-x: scroll;
+  transition: 0.5s;
   &-header {
     font-size: var(--oj-h8-size);
     font-weight: 600;
@@ -85,8 +88,11 @@ function closeCart() {
   }
   &-main {
     // footer is fixed so with this margin last product doesn't stay behind footer,
-    margin: 5rem 0;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+    transition: 0.5s;
     &-list {
+      position: relative;
       display: flex;
       flex-direction: column;
       gap: 2rem;
@@ -98,10 +104,9 @@ function closeCart() {
     position: fixed;
     bottom: 0;
     height: 10%;
-    width: 100%;
+    width: 95%;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem;
     &-total {
       text-align: center;
       & span {

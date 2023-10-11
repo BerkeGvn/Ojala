@@ -1,5 +1,5 @@
 <template>
-  <div class="cart-card-container">
+  <li class="cart-card-container">
     <RouterLink
       :to="{
         name: 'product',
@@ -12,13 +12,17 @@
         <img :src="props.product?.images[0]" alt="" />
       </div>
       <div class="cart-card-main">
-        <span class="cart-card-main-name">
-          {{ props.product?.name }}
-        </span>
-        <span class="cart-card-main-price"> ${{ props.product?.price }} </span>
+        <div>
+          <span class="cart-card-main-name">
+            {{ props.product?.name }}
+          </span>
+          <span class="cart-card-main-code">{{ props.product?.id }}</span>
+        </div>
+
+        <span class="cart-card-main-price"> ${{ props.product?.price.toFixed(2) }} </span>
       </div>
     </RouterLink>
-    <button class="cart-card-delete" @click="store.deleteProduct(props.product.id)">
+    <button class="cart-card-delete" @click="deleteItem(props.product.id)">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
         <path
           fill="#4a4a48"
@@ -26,7 +30,7 @@
         />
       </svg>
     </button>
-  </div>
+  </li>
 </template>
 
 <script setup lang="ts">
@@ -47,6 +51,10 @@ function formatRouteParam(name: string) {
   return name.toLowerCase().replace(/ /g, '-')
 }
 
+function deleteItem(id: string) {
+  store.deleteProduct(id)
+}
+
 function routeToLink() {
   emit('routeToLink')
 }
@@ -64,6 +72,7 @@ function routeToLink() {
   background-color: var(--oj-background-color-1);
   padding: 1rem 2rem;
   border-radius: 1rem;
+
   &-img {
     width: 10rem;
     height: 10rem;
@@ -76,14 +85,19 @@ function routeToLink() {
   &-main {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-left: 0.5rem;
     &-name {
-      font-size: var(--oj-p3-size);
-      font-weight: 500;
+      font-size: var(--oj-p1-size);
+      font-weight: 600;
+    }
+    &-code {
+      display: block;
+      font-size: var(--oj-p5-size);
     }
     &-price {
-      font-size: var(--oj-p4-size);
-      font-weight: 500;
+      font-size: var(--oj-p3-size);
+      font-weight: 600;
     }
   }
   &-delete {
