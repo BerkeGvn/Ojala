@@ -12,7 +12,7 @@
     <div class="product-card-details">
       <div class="product-card-details-container">
         <p class="product-card-details-name">{{ props.product.name }}</p>
-        <p class="product-card-details-price">${{ props.product.price }}</p>
+        <p class="product-card-details-price">${{ props.product.price.toFixed(2) }}</p>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 50 50">
         <path
