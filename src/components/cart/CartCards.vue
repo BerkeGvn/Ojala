@@ -106,7 +106,7 @@ function routeToLink() {
     position: absolute;
     right: 5%;
     top: 1rem;
-    z-index: 99;
+    z-index: 5;
   }
 }
 </style>

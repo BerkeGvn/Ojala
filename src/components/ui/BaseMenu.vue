@@ -77,7 +77,8 @@ onMounted(() => {
       duration: 1,
       opacity: 1,
       height: '100vh', // change this to 100vh for full-height menu
-      ease: 'expo.inOut'
+      ease: 'expo.inOut',
+      backdropFilter: 'blur(3px)'
     },
     'start'
   )
@@ -136,7 +137,7 @@ function closeMenu() {
   height: 0;
   background-color: var(--oj-background-color);
   overflow: hidden;
-  margin-top: -1rem;
+  margin-top: -1px;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */

@@ -10,7 +10,9 @@
         </svg>
       </li>
       <li class="navbar-list-el navbar-list-el-ojala">
-        <RouterLink to="/" class="categories-container">ojala</RouterLink>
+        <RouterLink to="/" class="categories-container" @click="menuStatus ? closeMenu() : null"
+          >ojala</RouterLink
+        >
       </li>
       <li class="navbar-list-el navbar-list-el-cart" v-if="!menuStatus" @click="toggleCart">
         <a class="navbar-list-el-cart-link" href="#">
@@ -33,9 +35,14 @@
         <span>Close</span>
       </li>
     </ul>
+    <BaseMenu :status="menuStatus" @closeMenu="closeMenu"></BaseMenu>
+    <!-- Cart animation is not complicated so i used vue transition -->
+    <Transition name="cart">
+      <div v-if="cartStatus" class="navbar-cart-overlay">
+        <BaseCart class="base-cart" @closeCart="closeCart"></BaseCart>
+      </div>
+    </Transition>
   </nav>
-  <BaseMenu :status="menuStatus" @closeMenu="closeMenu"></BaseMenu>
-  <BaseCart v-if="cartStatus" @closeCart="closeCart"></BaseCart>
 </template>
 
 <script setup lang="ts">
@@ -121,5 +128,42 @@ function closeCart() {
       }
     }
   }
+
+  &-cart-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.185);
+    backdrop-filter: blur(3px);
+  }
+}
+
+.cart-enter-active,
+.cart-leave-active {
+  transition: all 0.5s ease-in-out;
+}
+.cart-leave-active {
+  transition-delay: 0.25s;
+}
+
+.cart-enter-from,
+.cart-leave-to {
+  opacity: 0;
+}
+
+.cart-enter-active .base-cart,
+.cart-leave-active .base-cart {
+  transition: all 0.3s ease;
+}
+.cart-enter-active .base-cart {
+  transition-delay: 0.5s;
+}
+
+.cart-enter-from .base-cart,
+.cart-leave-to .base-cart {
+  transform: scale(0.5);
+  opacity: 0;
 }
 </style>
