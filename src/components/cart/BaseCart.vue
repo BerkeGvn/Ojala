@@ -34,7 +34,6 @@
       </div>
     </div>
   </div>
-  <div class="cart-overlay"></div>
 </template>
 
 <script setup lang="ts">
@@ -59,9 +58,8 @@ function closeCart() {
   top: 0;
   z-index: 123;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
   background-color: var(--oj-background-color);
-  padding: 2rem;
   overflow-x: scroll;
   transition: 0.5s;
   &-header {
@@ -70,10 +68,11 @@ function closeCart() {
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    position: fixed;
+    position: sticky;
+    padding-left: 1rem;
     top: 0;
-    z-index: 1;
-    width: 96%;
+    z-index: 42;
+    width: 100%;
     height: 6rem;
     background-color: inherit;
     &-text {
@@ -87,9 +86,7 @@ function closeCart() {
     }
   }
   &-main {
-    // footer is fixed so with this margin last product doesn't stay behind footer,
-    margin-top: 5rem;
-    margin-bottom: 8rem;
+    padding: 0 1rem;
     transition: 0.5s;
     &-list {
       position: relative;
@@ -101,10 +98,11 @@ function closeCart() {
   &-footer {
     background-color: inherit;
     display: flex;
-    position: fixed;
+    position: sticky;
+    z-index: 10;
     bottom: 0;
-    height: 10%;
-    width: 95%;
+    height: 12%;
+    width: 100%;
     justify-content: space-around;
     align-items: center;
     &-total {
