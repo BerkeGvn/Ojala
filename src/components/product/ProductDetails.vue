@@ -67,7 +67,9 @@ function decreaseProdNum() {
 
 function addProductToCart() {
   if (product.value) {
-    cartStore.addToCart(product.value)
+    for (let i = 0; i < prodNum.value; i++) {
+      cartStore.addToCart(product.value)
+    }
   } else {
     console.error('An error occured while adding item to cart. :(')
   }

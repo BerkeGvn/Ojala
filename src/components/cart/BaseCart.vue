@@ -64,12 +64,12 @@ function closeCart() {
   transition: 0.5s;
   &-header {
     font-size: var(--oj-h8-size);
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     position: sticky;
-    padding-left: 1rem;
+    padding-left: 2rem;
     top: 0;
     z-index: 42;
     width: 100%;
@@ -86,7 +86,7 @@ function closeCart() {
     }
   }
   &-main {
-    padding: 0 1rem;
+    padding: 0 2rem;
     transition: 0.5s;
     &-list {
       position: relative;
@@ -112,11 +112,12 @@ function closeCart() {
       }
       &-tax {
         font-size: var(--oj-p4-size);
-        font-weight: 500;
+        font-weight: 600;
       }
       &-price {
         font-size: var(--oj-p0-size);
-        font-weight: 600;
+        color: var(--oj-text-color-2);
+        font-weight: 700;
       }
     }
     &-button {
@@ -124,6 +125,7 @@ function closeCart() {
         border: none;
         font-size: var(--oj-p4-size);
         color: var(--oj-text-color-0);
+        font-weight: 600;
         background-color: var(--oj-primary);
         border-radius: 1rem;
         padding: 2rem 2rem;

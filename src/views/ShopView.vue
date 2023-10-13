@@ -1,8 +1,8 @@
 <template>
-  <main class="shop">
+  <section class="shop">
     <ProductList></ProductList>
     <BaseFooter></BaseFooter>
-  </main>
+  </section>
 </template>
 
 <script setup lang="ts">
