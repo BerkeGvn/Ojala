@@ -44,6 +44,7 @@
 @import '../../assets/style/variables.scss';
 
 .about-info {
+  padding: 0 2rem;
   &-img-container {
     overflow: hidden;
     margin: 0 -2rem;
@@ -60,6 +61,7 @@
     &-2 {
       margin: -1rem -2rem;
       padding: 2rem;
+      padding-bottom: 4rem;
       background-color: var(--oj-primary);
       color: var(--oj-text-color-0);
     }
