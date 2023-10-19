@@ -67,6 +67,25 @@
     <div class="product-filter-search">
       <label for="search"></label>
       <input type="text" id="search" placeholder="Search" v-model="search" @input="searchItem" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512">
+        <g transform="rotate(90 256 256)">
+          <path
+            fill="none"
+            stroke="#4a4a48"
+            stroke-miterlimit="10"
+            stroke-width="32"
+            d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z"
+          />
+          <path
+            fill="none"
+            stroke="#4a4a48"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="32"
+            d="M338.29 338.29L448 448"
+          />
+        </g>
+      </svg>
     </div>
   </div>
 </template>
@@ -128,6 +147,36 @@ function searchItem() {
         color: var(--oj-text-color-0);
         font-weight: 500;
       }
+    }
+  }
+  &-search {
+    margin: 1rem 0;
+    position: relative;
+    width: 80%;
+    & input {
+      border-radius: 1rem;
+      background-color: var(--oj-background-color-1);
+      height: 4rem;
+      width: 100%;
+      padding-left: 1rem;
+      font-family: inherit;
+      font-size: var(--oj-p4-size);
+      color: var(--oj-text-color);
+      border: 2px solid var(--oj-background-color);
+      transition: 0.5s;
+      outline: none;
+      &::placeholder {
+        color: var(--oj-text-color-1);
+      }
+      &:focus {
+        border: 2px solid var(--oj-text-color-2);
+      }
+    }
+    & svg {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
