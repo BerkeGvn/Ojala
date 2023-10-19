@@ -12,6 +12,14 @@
 import AboutInfo from '@/components/about/AboutInfo.vue'
 import AboutShowcase from '@/components/about/AboutShowcase.vue'
 import SubForm from '@/components/ui/SubForm.vue'
+import { onBeforeRouteLeave } from 'vue-router'
+import { inject } from 'vue'
+
+// execute scroll to top when route changes
+const scrollTop: () => void = inject('scrollTop') as () => void
+onBeforeRouteLeave(() => {
+  scrollTop()
+})
 </script>
 
 <style scoped lang="scss">
