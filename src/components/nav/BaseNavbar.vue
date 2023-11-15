@@ -38,7 +38,7 @@
     <BaseMenu :status="menuStatus" @closeMenu="closeMenu"></BaseMenu>
     <!-- Cart animation is not complicated so i used vue transition -->
     <Transition name="cart">
-      <div v-if="cartStatus" class="navbar-cart-overlay">
+      <div v-if="cartStatus" class="navbar-cart-overlay" data-lenis-prevent>
         <BaseCart class="base-cart" @closeCart="closeCart"></BaseCart>
       </div>
     </Transition>
@@ -59,16 +59,32 @@ const store = useCartStore()
 
 function toggleMenu() {
   menuStatus.value = !menuStatus.value
+  toggleBodyScroll(menuStatus.value)
 }
 function toggleCart() {
   cartStatus.value = !cartStatus.value
+  toggleBodyScroll(cartStatus.value)
 }
 
 function closeMenu() {
   menuStatus.value = false
+  toggleBodyScroll(menuStatus.value)
 }
+
 function closeCart() {
   cartStatus.value = false
+  toggleBodyScroll(cartStatus.value)
+}
+
+// Because of scroll library lenis, when modal is open body was still scrollable, with this function we prevent that
+function toggleBodyScroll(modal: boolean) {
+  if (modal) {
+    document.body.setAttribute('data-lenis-prevent', '')
+    document.body.style.overflowY = 'hidden'
+  } else {
+    document.body.removeAttribute('data-lenis-prevent')
+    document.body.style.overflowY = 'scroll'
+  }
 }
 </script>
 
@@ -130,13 +146,14 @@ function closeCart() {
   }
 
   &-cart-overlay {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
+    height: 100%;
+    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.185);
     backdrop-filter: blur(3px);
+    overflow: auto;
   }
 }
 

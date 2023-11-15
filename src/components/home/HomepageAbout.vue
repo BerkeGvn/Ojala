@@ -25,6 +25,7 @@
       <h3 class="home-about-text-header">CRAFTING HOME COMFORT: WHERE STYLE MEETS SERENITY.</h3>
       <p class="home-about-text-para">
         At Ojala, we blend style and comfort to curate the perfect furniture pieces for your home.
+        Our mission is to create timeless designs that elevate your living spaces.
       </p>
       <div class="home-about-text-button">
         <BaseButton :route="'/about'">About Us</BaseButton>

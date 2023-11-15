@@ -25,6 +25,7 @@ onBeforeRouteLeave(() => {
 <style scoped lang="scss">
 .about {
   margin-top: 2rem;
+  overflow: hidden;
   &-header {
     margin-left: 2rem;
     text-transform: uppercase;

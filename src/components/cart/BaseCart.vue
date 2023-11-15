@@ -11,9 +11,8 @@
         </svg>
       </button>
     </div>
-
     <div class="cart-main">
-      <li class="cart-main-list">
+      <ul class="cart-main-list">
         <CartCards
           class="cart-main-list-item"
           v-for="(product, index) in products"
@@ -22,7 +21,7 @@
           @routeToLink="closeCart"
         >
         </CartCards>
-      </li>
+      </ul>
     </div>
     <div class="cart-footer">
       <div class="cart-footer-total">
@@ -57,10 +56,10 @@ function closeCart() {
   position: fixed;
   top: 0;
   z-index: 123;
-  width: 100vw;
-  height: 95vh;
+  width: 100%;
+  height: 90%;
   background-color: var(--oj-background-color);
-  overflow-x: scroll;
+  overflow-y: scroll;
   transition: 0.5s;
   &-header {
     font-size: var(--oj-h8-size);
