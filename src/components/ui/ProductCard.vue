@@ -68,7 +68,7 @@ function formatRouteParam(name: string) {
   &-details {
     display: flex;
     font-size: var(--oj-p3-size);
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     justify-content: space-between;
     align-items: center;
