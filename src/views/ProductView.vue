@@ -1,6 +1,7 @@
 <template>
   <section class="product-section">
     <ProductDetails></ProductDetails>
+    <BaseFooter></BaseFooter>
   </section>
 </template>
 

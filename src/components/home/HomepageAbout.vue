@@ -82,5 +82,24 @@ animate.parallax('.home-about-images-img-2', '.home-about-images-img-2', 80, -50
       margin-top: 2rem;
     }
   }
+
+  @media only screen and (min-width: 700px) {
+    margin: 10rem 0;
+    flex-direction: row;
+    align-items: center;
+    &-images {
+      &-img-1 {
+        width: 35vw;
+      }
+      &-img-2 {
+        width: 25vw;
+        bottom: -10%;
+        right: -20%;
+      }
+    }
+  }
+  &-text {
+    gap: 3rem;
+  }
 }
 </style>

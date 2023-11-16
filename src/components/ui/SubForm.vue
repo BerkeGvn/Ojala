@@ -109,5 +109,9 @@ function submitForm() {
       }
     }
   }
+
+  @media only screen and (min-width: 700px) {
+  }
+  max-width: 40rem;
 }
 </style>

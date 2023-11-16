@@ -48,4 +48,14 @@ const props = defineProps(['images'])
 .carousel__next {
   box-sizing: content-box;
 }
+
+@media only screen and (min-width: 700px) {
+  .carousel {
+    width: 50%;
+  }
+  .carousel__slide {
+    padding: 10px;
+    height: 50rem;
+  }
+}
 </style>

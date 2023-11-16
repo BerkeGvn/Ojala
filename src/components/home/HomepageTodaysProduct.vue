@@ -96,6 +96,12 @@ animate.backgroundImage(
       margin-top: 2rem;
     }
   }
+
+  @media only screen and (min-width: 700px) {
+    .today-product-container-item {
+      margin-top: 8rem;
+    }
+  }
 }
 
 // SALE ANIMATION
