@@ -84,5 +84,37 @@ animate.parallax('.about-showcase-img-5', '.about-showcase-img-5', 60, -120)
       }
     }
   }
+  @media only screen and (min-width: 600px) {
+    &-img {
+      &-1 {
+        width: 25rem;
+      }
+      &-2 {
+        width: 30rem;
+      }
+      &-3 {
+        width: 50rem;
+        left: 50%;
+        transform: translateX(-45%);
+      }
+      &-4 {
+        width: 25rem;
+      }
+      &-5 {
+        width: 30rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 850px) {
+    &-img {
+      &-1 {
+        bottom: 2rem;
+        right: 4rem;
+      }
+      &-5 {
+        right: 4rem;
+      }
+    }
+  }
 }
 </style>

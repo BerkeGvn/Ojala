@@ -80,6 +80,7 @@ function addProductToCart() {
 @import '../../assets/style/variables.scss';
 .product {
   margin-top: 2rem;
+  margin-bottom: 8rem;
   &-details {
     padding: 2rem;
 
@@ -94,6 +95,7 @@ function addProductToCart() {
     &-functions {
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
       &-numbers {
         display: flex;
         align-items: center;
@@ -113,6 +115,19 @@ function addProductToCart() {
           width: 4rem;
           border-radius: 1rem;
         }
+      }
+    }
+  }
+  @media only screen and (min-width: 700px) {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 4rem;
+    &-details {
+      width: 40rem;
+      &-functions {
+        gap: 2rem;
       }
     }
   }

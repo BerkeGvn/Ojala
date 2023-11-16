@@ -52,5 +52,15 @@
       align-self: center;
     }
   }
+  @media only screen and (min-width: 700px) {
+    &-h1 {
+      font-size: calc(var(--oj-h0-size) + 2rem);
+    }
+    &-sub {
+      &-h2 {
+        font-size: var(--oj-h6-size);
+      }
+    }
+  }
 }
 </style>

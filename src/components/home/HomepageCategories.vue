@@ -163,4 +163,16 @@ animate.backgroundImage('.img-4', '.img-4', -10, 1.2)
     }
   }
 }
+@media only screen and (min-width: 700px) {
+  .categories-section {
+    max-width: 100%;
+  }
+  .categories {
+    flex-direction: row;
+    flex-wrap: wrap;
+    &-container {
+      width: 48%;
+    }
+  }
+}
 </style>

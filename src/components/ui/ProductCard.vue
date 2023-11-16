@@ -73,5 +73,8 @@ function formatRouteParam(name: string) {
     justify-content: space-between;
     align-items: center;
   }
+  @media only screen and (min-width: 700px) {
+    padding: 2rem 4rem;
+  }
 }
 </style>

@@ -101,5 +101,12 @@ function searchItem(keyword: string) {
       }
     }
   }
+  @media only screen and (min-width: 700px) {
+    &-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
 }
 </style>

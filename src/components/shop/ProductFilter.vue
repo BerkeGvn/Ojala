@@ -1,7 +1,6 @@
 <template>
+  <span class="product-filter-header">Filters</span>
   <div class="product-filter">
-    <span class="product-filter-header">Filters</span>
-
     <div class="product-filter-container">
       <div class="product-filter-button">
         <input
@@ -177,6 +176,17 @@ function searchItem() {
       right: 5%;
       top: 50%;
       transform: translateY(-50%);
+    }
+  }
+  @media only screen and (min-width: 700px) {
+    display: flex;
+    align-items: center;
+    &-container {
+      gap: 1rem;
+    }
+    &-search {
+      margin: 0;
+      margin-left: 1rem;
     }
   }
 }
