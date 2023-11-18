@@ -44,6 +44,31 @@ export const animate = {
       ScrollTrigger.killAll()
     })
   },
+  parallaxAndScale(el: string, container: string, startPsn: number, endPsn: number) {
+    const mm = gsap.matchMedia()
+    onMounted(() => {
+      mm.add('(min-width: 850px)', () => {
+        gsap.fromTo(
+          el,
+          {
+            y: startPsn
+          },
+          {
+            y: endPsn,
+            scale: 1.1,
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              start: 'start bottom'
+            }
+          }
+        )
+      })
+      onUnmounted(() => {
+        ScrollTrigger.killAll()
+      })
+    })
+  },
 
   moveCards(cardList: string, container: string) {
     onMounted(() => {
