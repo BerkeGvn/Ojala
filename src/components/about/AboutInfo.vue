@@ -121,6 +121,9 @@ animate.parallaxAndScale('.about-info-img-2', '.about-info-img-container-2', 20,
     &-img-container-2 {
       margin: 0;
     }
+    &-paragraph {
+      width: 80%;
+    }
   }
 }
 </style>

@@ -131,5 +131,13 @@ function closeCart() {
       }
     }
   }
+  @media only screen and (min-width: 850px) {
+    width: 85%;
+    height: 80%;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+  }
 }
 </style>

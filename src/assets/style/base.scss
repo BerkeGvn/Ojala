@@ -33,6 +33,10 @@ a:visited {
   color: inherit;
 }
 
+button {
+  font-family: var(--font-family);
+}
+
 html.lenis {
   height: auto;
 }

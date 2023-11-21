@@ -116,5 +116,85 @@ animate.parallax('.about-showcase-img-5', '.about-showcase-img-5', 60, -120)
       }
     }
   }
+  // tablets
+  @media (max-width: 1000px) and (min-height: 900px) {
+    height: 90rem;
+    &-img {
+      &-1 {
+        bottom: 2rem;
+        right: 4rem;
+      }
+      &-5 {
+        right: 4rem;
+        bottom: 4rem;
+        width: 27rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    height: 90rem;
+    &-img {
+      &-1 {
+        bottom: 2rem;
+        right: 4rem;
+      }
+      &-5 {
+        right: 4rem;
+        bottom: 4rem;
+        width: 27rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    &-img {
+      &-1 {
+        width: 30rem;
+      }
+      &-2 {
+        width: 34rem;
+      }
+      &-4 {
+        height: 30rem;
+      }
+      &-5 {
+        width: 32rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    &-img {
+      &-1 {
+        width: 36rem;
+      }
+      &-2 {
+        width: 36rem;
+        right: 4rem;
+      }
+      &-3 {
+        width: 70rem;
+      }
+      &-4 {
+        width: 29rem;
+        left: 12rem;
+      }
+      &-5 {
+        width: 35rem;
+        right: 0rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    height: 110rem;
+    &-img {
+      &-2 {
+        right: 16rem;
+      }
+      &-4 {
+        width: 32rem;
+        left: 18rem;
+      }
+    }
+  }
 }
 </style>
