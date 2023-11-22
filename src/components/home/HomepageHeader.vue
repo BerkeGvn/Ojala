@@ -64,6 +64,30 @@
   }
   @media only screen and (min-width: 1200px) {
     background-image: url(../../assets/images/home-header-big.jpg);
+    &-sub {
+      &-h2 {
+        width: 60%;
+        text-shadow: 0 1px 2px var(--oj-text-color);
+      }
+    }
+  }
+  @media only screen and (min-width: 1500px) {
+    &-h1 {
+      font-size: calc(var(--oj-h0-size) * 2);
+      margin-top: -4rem;
+    }
+    &-sub {
+      &-h2 {
+        width: 48%;
+      }
+    }
+  }
+  @media only screen and (min-width: 1800px) {
+    &-sub {
+      &-h2 {
+        width: 40%;
+      }
+    }
   }
 }
 </style>

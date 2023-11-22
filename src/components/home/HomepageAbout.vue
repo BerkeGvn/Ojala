@@ -97,9 +97,61 @@ animate.parallax('.home-about-images-img-2', '.home-about-images-img-2', 80, -50
         right: -20%;
       }
     }
+    &-text {
+      gap: 3rem;
+    }
   }
-  &-text {
-    gap: 3rem;
+  @media only screen and (min-width: 1000px) {
+    margin: 10rem 0;
+    gap: 6rem;
+    &-images {
+      width: 100%;
+      &-img-1 {
+        width: 40rem;
+      }
+      &-img-2 {
+        width: 25rem;
+        left: 50%;
+      }
+    }
+  }
+  @media only screen and (min-width: 1300px) {
+    gap: 2rem;
+    &-images {
+      width: 70%;
+    }
+    &-text {
+      padding-right: 8rem;
+      &-para {
+        font-size: var(--oj-p3-size);
+      }
+      &-button {
+        margin-right: 2rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 1700px) {
+    justify-content: center;
+    &-images {
+      width: 40%;
+      &-img-1 {
+        margin-left: 8rem;
+        width: 40rem;
+      }
+      &-img-2 {
+        left: 60%;
+      }
+    }
+    &-text {
+      padding-right: 8rem;
+      width: 50%;
+      &-para {
+        font-size: var(--oj-p3-size);
+      }
+      &-button {
+        margin-right: 2rem;
+      }
+    }
   }
 }
 </style>
