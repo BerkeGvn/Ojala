@@ -189,5 +189,14 @@ function searchItem() {
       margin-left: 1rem;
     }
   }
+  @media only screen and (min-width: 1000px) {
+    &-container {
+      flex: 2;
+      justify-content: flex-start;
+    }
+    &-search {
+      flex: 1;
+    }
+  }
 }
 </style>

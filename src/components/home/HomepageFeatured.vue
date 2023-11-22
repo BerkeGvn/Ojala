@@ -1,6 +1,6 @@
 <template>
   <section class="featured-products">
-    <h3 class="featured-products-header">TODAY’S PRODUCT</h3>
+    <h3 class="featured-products-header">FEATURED PRODUCTS</h3>
     <div class="featured-products-list-container">
       <ul class="featured-products-list">
         <li class="featured-products-list-item" v-for="item in featuredProducts" :key="item.id">

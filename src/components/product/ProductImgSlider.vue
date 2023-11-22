@@ -58,4 +58,13 @@ const props = defineProps(['images'])
     height: 50rem;
   }
 }
+@media only screen and (min-width: 1000px) {
+  .carousel {
+    width: 40%;
+  }
+  .carousel__slide {
+    padding: 10px;
+    height: 50rem;
+  }
+}
 </style>
