@@ -102,6 +102,11 @@ animate.backgroundImage(
       margin-top: 8rem;
     }
   }
+  @media only screen and (min-width: 1200px) {
+    &-header {
+      text-align: center;
+    }
+  }
 }
 
 // SALE ANIMATION

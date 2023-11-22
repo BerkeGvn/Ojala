@@ -1,5 +1,6 @@
 <template>
   <section class="categories-section">
+    <h3 class="categories-header">Categories</h3>
     <div class="categories">
       <RouterLink
         :to="{
@@ -120,6 +121,9 @@ animate.backgroundImage('.img-4', '.img-4', -10, 1.2)
 }
 
 .categories {
+  &-header {
+    display: none;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,12 +170,57 @@ animate.backgroundImage('.img-4', '.img-4', -10, 1.2)
 @media only screen and (min-width: 700px) {
   .categories-section {
     max-width: 100%;
+    overflow: hidden;
   }
   .categories {
     flex-direction: row;
     flex-wrap: wrap;
     &-container {
       width: 48%;
+      &-text {
+        position: absolute;
+        top: 0;
+        margin: 1rem;
+        & svg {
+          align-self: flex-end;
+        }
+        &-right {
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+  }
+  .img-3 {
+    & img {
+      width: 103%;
+    }
+  }
+  .img-4 {
+    & img {
+      width: 105%;
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .categories {
+    justify-content: space-evenly;
+    margin: 0 -6rem;
+
+    &-header {
+      display: block;
+      font-size: var(--oj-h4-size);
+      text-transform: uppercase;
+    }
+    &-container {
+      width: 40%;
+    }
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .categories {
+    &-container {
+      width: 20%;
     }
   }
 }
