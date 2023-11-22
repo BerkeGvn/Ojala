@@ -1,30 +1,32 @@
 <template>
   <section class="sub-section">
-    <form class="sub" @submit.prevent="submitForm">
-      <p class="sub-header">$50 OFF YOUR FIRST PURCHASE</p>
-      <p class="sub-text">
-        Signup for the latest deals and you’ll get $50 OFF your first purchase!*
-      </p>
-      <div class="sub-form">
-        <label for="name"></label>
-        <input id="name" type="text" placeholder="Name" />
-        <label for="email"></label>
-        <input id="email" type="email" placeholder="Email" />
-        <div class="sub-form-btn">
-          <BaseButton :color="'white'" :type="'button'" :route="'/'">subscribe</BaseButton>
+    <div class="sub-section-form-container">
+      <form class="sub" @submit.prevent="submitForm">
+        <p class="sub-header">$50 OFF YOUR FIRST PURCHASE</p>
+        <p class="sub-text">
+          Signup for the latest deals and you’ll get $50 OFF your first purchase!*
+        </p>
+        <div class="sub-form">
+          <label for="name"></label>
+          <input id="name" type="text" placeholder="Name" />
+          <label for="email"></label>
+          <input id="email" type="email" placeholder="Email" />
+          <div class="sub-form-btn">
+            <BaseButton :color="'white'" :type="'button'" :route="'/'">subscribe</BaseButton>
+          </div>
         </div>
-      </div>
-      <div class="sub-rules">
-        <span class="sub-rules">*On orders over $200 (excl. delivery)</span>
-        <span class="sub-rules">*Only one coupon per cart.</span>
-      </div>
-      <div class="sub-terms">
-        <span class="sub-conditional"
-          >By signing up you agree to our <a href="">Terms and Conditions</a> and
-          <a href="">Privacy Policy</a>.
-        </span>
-      </div>
-    </form>
+        <div class="sub-rules">
+          <span class="sub-rules">*On orders over $200 (excl. delivery)</span>
+          <span class="sub-rules">*Only one coupon per cart.</span>
+        </div>
+        <div class="sub-terms">
+          <span class="sub-conditional"
+            >By signing up you agree to our <a href="">Terms and Conditions</a> and
+            <a href="">Privacy Policy</a>.
+          </span>
+        </div>
+      </form>
+    </div>
   </section>
 </template>
 
@@ -111,7 +113,27 @@ function submitForm() {
   }
 
   @media only screen and (min-width: 700px) {
+    max-width: 40rem;
   }
-  max-width: 40rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .sub-section {
+    &-form-container {
+      background-color: var(--oj-background-color);
+      width: max-content;
+      padding: 2rem;
+      margin: 0 auto;
+      border-radius: 1rem;
+    }
+    background-image: url(../../assets/images/sub/sub-background.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 4rem 0;
+    padding: 4rem;
+  }
+  .sub {
+    margin: 0;
+  }
 }
 </style>

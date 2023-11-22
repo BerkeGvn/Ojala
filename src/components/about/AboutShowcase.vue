@@ -163,6 +163,7 @@ animate.parallax('.about-showcase-img-5', '.about-showcase-img-5', 60, -120)
     }
   }
   @media only screen and (min-width: 1400px) {
+    margin-bottom: 8rem;
     &-img {
       &-1 {
         width: 36rem;
@@ -184,7 +185,7 @@ animate.parallax('.about-showcase-img-5', '.about-showcase-img-5', 60, -120)
       }
     }
   }
-  @media only screen and (min-width: 1400px) {
+  @media only screen and (min-width: 1600px) {
     height: 110rem;
     &-img {
       &-2 {
