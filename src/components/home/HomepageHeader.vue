@@ -62,5 +62,8 @@
       }
     }
   }
+  @media only screen and (min-width: 1200px) {
+    background-image: url(../../assets/images/home-header-big.jpg);
+  }
 }
 </style>

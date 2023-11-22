@@ -108,5 +108,15 @@ function searchItem(keyword: string) {
       justify-content: space-evenly;
     }
   }
+  @media only screen and (min-width: 1000px) {
+    &-list {
+      justify-content: flex-start;
+    }
+  }
+  @media only screen and (min-width: 1500px) {
+    &-list {
+      row-gap: 6rem;
+    }
+  }
 }
 </style>

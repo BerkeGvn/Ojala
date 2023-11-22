@@ -131,5 +131,16 @@ function addProductToCart() {
       }
     }
   }
+  @media only screen and (min-width: 1000px) {
+    &-details {
+      width: 80rem;
+      &-functions {
+        justify-content: flex-start;
+      }
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    justify-content: flex-start;
+  }
 }
 </style>
