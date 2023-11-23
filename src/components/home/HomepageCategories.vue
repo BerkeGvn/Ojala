@@ -121,6 +121,8 @@ animate.backgroundImage('.img-4', '.img-4', -10, 1.2)
 }
 
 .categories {
+  user-select: none;
+
   &-header {
     display: none;
   }

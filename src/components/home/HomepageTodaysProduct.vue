@@ -83,6 +83,7 @@ animate.backgroundImage(
       }
     }
     &-sale {
+      user-select: none;
       &-text {
         display: inline-block;
         color: var(--oj-background-color);

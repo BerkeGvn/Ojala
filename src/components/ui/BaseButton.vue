@@ -61,18 +61,36 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s;
+  & svg {
+    transition: all 0.5s;
+  }
   &:hover {
     cursor: pointer;
+    scale: 1.05;
+    & svg {
+      transform: translateX(10px);
+    }
+  }
+  &:active {
+    transition: all 0.2s;
+    scale: 1;
   }
 }
 
 .green {
   background-color: var(--oj-primary);
   color: var(--oj-text-color-0);
+  &:hover {
+    background-color: #4b4533;
+  }
 }
 .white {
   background-color: var(--oj-background-color);
   color: var(--oj-text-color-2);
   font-weight: 500;
+  &:hover {
+    background-color: #ebe8e8;
+  }
 }
 </style>
