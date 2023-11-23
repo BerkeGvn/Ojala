@@ -27,6 +27,11 @@ const router = createRouter({
       meta: {
         watchParam: 'productName'
       }
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('../views/NotFound.vue')
     }
   ]
 })
