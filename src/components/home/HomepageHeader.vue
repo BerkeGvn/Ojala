@@ -33,6 +33,7 @@
   justify-content: space-between;
   padding: 2rem;
   margin-top: 2rem;
+  user-select: none;
   &-h1 {
     text-transform: uppercase;
     font-size: var(--oj-h0-size);

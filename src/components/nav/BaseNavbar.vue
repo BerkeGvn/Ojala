@@ -155,6 +155,11 @@ function toggleBodyScroll(modal: boolean) {
     backdrop-filter: blur(3px);
     overflow: auto;
   }
+  & svg {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .cart-enter-active,
