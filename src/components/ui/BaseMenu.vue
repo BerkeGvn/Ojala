@@ -10,7 +10,7 @@
         <Router-link to="/about" @click="closeMenu">About us</Router-link>
       </li>
       <li class="menu-list-el">
-        <Router-link to="/about" @click="closeMenu">Contact</Router-link>
+        <a to="/" @click="closeMenu">Contact</a>
       </li>
     </ul>
     <div class="menu-socials">

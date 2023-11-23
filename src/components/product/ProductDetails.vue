@@ -25,6 +25,9 @@
         </div>
         <BaseButton @click="addProductToCart" :type="'button'" :route="'/'">Add to card</BaseButton>
       </div>
+      <span class="product-details-notification">{{
+        (prodNum > 1 ? prodNum + ' items' : 'An item') + ' has been added to the cart'
+      }}</span>
     </div>
   </div>
 </template>
@@ -67,6 +70,17 @@ function decreaseProdNum() {
 
 function addProductToCart() {
   if (product.value) {
+    // when item is added to cart a notification shows up and disables buttons for 3 sec.
+    const notification = document.querySelector('.product-details-notification')
+    const buttons = document.querySelectorAll(
+      '.product-details-functions button'
+    ) as NodeListOf<HTMLButtonElement>
+    buttons.forEach((button) => (button.disabled = true))
+    notification?.classList.add('visibile')
+    setTimeout(() => {
+      notification?.classList.remove('visibile')
+      buttons.forEach((button) => (button.disabled = false))
+    }, 3000)
     for (let i = 0; i < prodNum.value; i++) {
       cartStore.addToCart(product.value)
     }
@@ -83,7 +97,8 @@ function addProductToCart() {
   margin-bottom: 8rem;
   &-details {
     padding: 2rem;
-
+    display: flex;
+    flex-direction: column;
     &-header {
       font-size: var(--oj-h8-size);
       font-weight: 600;
@@ -102,6 +117,7 @@ function addProductToCart() {
         justify-content: center;
         gap: 2rem;
         &-buttons {
+          cursor: pointer;
           border: none;
           font-size: var(--oj-h7-size);
           background-color: inherit;
@@ -117,6 +133,17 @@ function addProductToCart() {
         }
       }
     }
+    &-notification {
+      opacity: 0;
+      font-size: var(--oj-p4-size);
+      font-weight: 600;
+      text-align: center;
+      margin-top: 2rem;
+      transition: all 0.5s;
+    }
+  }
+  .visibile {
+    opacity: 1;
   }
   @media only screen and (min-width: 700px) {
     display: flex;
@@ -136,6 +163,9 @@ function addProductToCart() {
       width: 80rem;
       &-functions {
         justify-content: flex-start;
+      }
+      &-notification {
+        text-align: start;
       }
     }
   }

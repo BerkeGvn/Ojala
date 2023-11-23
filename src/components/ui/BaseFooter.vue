@@ -1,16 +1,16 @@
 <template>
   <footer class="footer">
     <ul class="footer-list">
-      <li class="footer-el"><a href="/">Home</a></li>
-      <li class="footer-el"><a href="/">Shop</a></li>
-      <li class="footer-el"><a href="/">About Us</a></li>
+      <li class="footer-el"><RouterLink to="/">Home</RouterLink></li>
+      <li class="footer-el"><RouterLink to="/shop">Shop</RouterLink></li>
+      <li class="footer-el"><RouterLink to="/about">Shop</RouterLink></li>
       <li class="footer-el"><a href="/">Contact Us</a></li>
       <li class="footer-el"><a href="/">F.A.Q</a></li>
       <li class="footer-el"><a href="/">Terms & Conditions</a></li>
       <li class="footer-el"><a href="/">Refund Policy</a></li>
       <li class="footer-el"><a href="/">Socials</a></li>
     </ul>
-    <span class="footer-logo">Ojala</span>
+    <span class="footer-logo"><RouterLink to="/">Ojala</RouterLink></span>
     <div class="footer-sub-text">
       <span>©2023</span>
       <span>Made By: <a href="https://github.com/BerkeGvn">Berke Güven</a></span>

@@ -72,6 +72,10 @@ button {
       transform: translateX(10px);
     }
   }
+  &:active {
+    transition: all 0.2s;
+    scale: 1;
+  }
 }
 
 .green {
