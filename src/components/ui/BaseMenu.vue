@@ -10,7 +10,7 @@
         <Router-link to="/about" @click="closeMenu">About us</Router-link>
       </li>
       <li class="menu-list-el">
-        <a to="/" @click="closeMenu">Contact</a>
+        <Router-link to="/contact" @click="closeMenu">Contact</Router-link>
       </li>
     </ul>
     <div class="menu-socials">
@@ -158,6 +158,13 @@ function closeMenu() {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    & a {
+      transition: all 0.3s;
+      &:hover {
+        color: var(--oj-primary-1);
+        font-size: 5.2rem;
+      }
+    }
   }
 
   &-overlay {
