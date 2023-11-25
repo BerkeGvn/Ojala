@@ -1,5 +1,6 @@
 <template>
   <header class="header">
+    <video autoplay loop muted :src="videoSource"></video>
     <h1 class="header-h1">OJALA</h1>
     <div class="header-sub">
       <h2 class="header-sub-h2">CREATING COMFORT, UNITING STYLE: YOUR HOME, ELEVATED.</h2>
@@ -18,14 +19,33 @@
   </header>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+
+const videoSource = ref('src/assets/images/asd/mobile-video.mp4')
+
+const checkViewportWidth = () => {
+  if (window.innerWidth > 1100) {
+    videoSource.value = 'src/assets/images/asd/desktop-video.mp4'
+  } else {
+    videoSource.value = 'src/assets/images/asd/mobile-video.mp4'
+  }
+}
+
+onMounted(() => {
+  checkViewportWidth()
+  window.addEventListener('resize', checkViewportWidth)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', checkViewportWidth)
+})
+</script>
 
 <style lang="scss" scoped>
 @import '../../assets/style/variables.scss';
 .header {
-  background-image: url(../../assets/images/home-header-small.jpg);
-  background-position: center;
-  background-size: cover;
+  position: relative;
   height: 95vh;
   color: var(--oj-text-color-0);
   display: flex;
@@ -64,7 +84,6 @@
     }
   }
   @media only screen and (min-width: 1200px) {
-    background-image: url(../../assets/images/home-header-big.jpg);
     &-sub {
       &-h2 {
         width: 60%;
@@ -90,5 +109,15 @@
       }
     }
   }
+}
+video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  aspect-ratio: 16 / 9;
 }
 </style>

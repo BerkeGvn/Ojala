@@ -3,7 +3,7 @@
     <ul class="footer-list">
       <li class="footer-el"><RouterLink to="/">Home</RouterLink></li>
       <li class="footer-el"><RouterLink to="/shop">Shop</RouterLink></li>
-      <li class="footer-el"><RouterLink to="/about">Shop</RouterLink></li>
+      <li class="footer-el"><RouterLink to="/about">About</RouterLink></li>
       <li class="footer-el"><a href="/">Contact Us</a></li>
       <li class="footer-el"><a href="/">F.A.Q</a></li>
       <li class="footer-el"><a href="/">Terms & Conditions</a></li>
