@@ -10,8 +10,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 154,
         id: 'C35342',
         images: [
-          '/public/images/products/chairs/baer-chair-1-small.png',
-          '/public/images/products/chairs/duva-chair-2-medium.jpg'
+          '/images/products/chairs/baer-chair-1-small.png',
+          '/images/products/chairs/duva-chair-2-medium.jpg'
         ]
       },
       {
@@ -19,8 +19,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 132,
         id: 'C25422',
         images: [
-          '/public/images/products/chairs/dolden-chair-1-small.png',
-          '/public/images/products/chairs/dolden-chair-2-medium.jpg'
+          '/images/products/chairs/dolden-chair-1-small.png',
+          '/images/products/chairs/dolden-chair-2-medium.jpg'
         ]
       },
       {
@@ -28,8 +28,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 114,
         id: 'C35624',
         images: [
-          '/public/images/products/chairs/tuscan-chair-1-small.png',
-          '/public/images/products/chairs/tuscan-chair-2-medium.jpg'
+          '/images/products/chairs/tuscan-chair-1-small.png',
+          '/images/products/chairs/tuscan-chair-2-medium.jpg'
         ]
       },
       {
@@ -37,8 +37,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 102,
         id: 'C48565',
         images: [
-          '/public/images/products/chairs/baer-chair-1-small.png',
-          '/public/images/products/chairs/baer-chair-2-medium.jpg'
+          '/images/products/chairs/baer-chair-1-small.png',
+          '/images/products/chairs/baer-chair-2-medium.jpg'
         ]
       },
       {
@@ -46,8 +46,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 121.58,
         id: 'C55876',
         images: [
-          '/public/images/products/chairs/folka-chair-1-small.png',
-          '/public/images/products/chairs/folka-chair-2-medium.jpg'
+          '/images/products/chairs/folka-chair-1-small.png',
+          '/images/products/chairs/folka-chair-2-medium.jpg'
         ]
       }
     ],
@@ -57,8 +57,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 265.58,
         id: 'T11464',
         images: [
-          '/public/images/products/tables/jeko-table-1-small.png',
-          '/public/images/products/tables/jeko-table-2-medium.jpg'
+          '/images/products/tables/jeko-table-1-small.png',
+          '/images/products/tables/jeko-table-2-medium.jpg'
         ]
       },
       {
@@ -66,8 +66,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 328.58,
         id: 'T24354',
         images: [
-          '/public/images/products/tables/kosu-table-1-small.png',
-          '/public/images/products/tables/kosu-table-2-medium.jpg'
+          '/images/products/tables/kosu-table-1-small.png',
+          '/images/products/tables/kosu-table-2-medium.jpg'
         ]
       },
       {
@@ -75,8 +75,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 328.58,
         id: 'T37960',
         images: [
-          '/public/images/products/tables/olak-table-1-small.png',
-          '/public/images/products/tables/olak-table-2-medium.jpg'
+          '/images/products/tables/olak-table-1-small.png',
+          '/images/products/tables/olak-table-2-medium.jpg'
         ]
       }
     ],
@@ -86,8 +86,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 396.58,
         id: 'S16758',
         images: [
-          '/public/images/products/sofas/bora-sofa-1-small.png',
-          '/public/images/products/sofas/bora-sofa-2-medium.jpg'
+          '/images/products/sofas/bora-sofa-1-small.png',
+          '/images/products/sofas/bora-sofa-2-medium.jpg'
         ]
       },
       {
@@ -95,8 +95,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 426.58,
         id: 'S22576',
         images: [
-          '/public/images/products/sofas/forn-sofa-1-small.png',
-          '/public/images/products/sofas/forn-sofa-2-medium.jpg'
+          '/images/products/sofas/forn-sofa-1-small.png',
+          '/images/products/sofas/forn-sofa-2-medium.jpg'
         ]
       },
       {
@@ -104,8 +104,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 451.58,
         id: 'S36454',
         images: [
-          '/public/images/products/sofas/mori-sofa-1-small.png',
-          '/public/images/products/sofas/mori-sofa-2-medium.jpg'
+          '/images/products/sofas/mori-sofa-1-small.png',
+          '/images/products/sofas/mori-sofa-2-medium.jpg'
         ]
       }
     ],
@@ -115,8 +115,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 204.58,
         id: 'CA3231',
         images: [
-          '/public/images/products/cabinets/aris-cabinet-1-small.png',
-          '/public/images/products/cabinets/aris-cabinet-2-medium.jpg'
+          '/images/products/cabinets/aris-cabinet-1-small.png',
+          '/images/products/cabinets/aris-cabinet-2-medium.jpg'
         ]
       },
       {
@@ -124,8 +124,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 274.99,
         id: 'CA6456',
         images: [
-          '/public/images/products/cabinets/dolap-cabinet-1-small.png',
-          '/public/images/products/cabinets/dolap-cabinet-2-medium.jpg'
+          '/images/products/cabinets/dolap-cabinet-1-small.png',
+          '/images/products/cabinets/dolap-cabinet-2-medium.jpg'
         ]
       },
       {
@@ -133,8 +133,8 @@ export const useProductsStore = defineStore('products', () => {
         price: 196.58,
         id: 'CA3543',
         images: [
-          '/public/images/products/cabinets/kora-cabinet-1-small.png',
-          '/public/images/products/cabinets/kora-cabinet-2-medium.jpg'
+          '/images/products/cabinets/kora-cabinet-1-small.png',
+          '/images/products/cabinets/kora-cabinet-2-medium.jpg'
         ]
       }
     ]
