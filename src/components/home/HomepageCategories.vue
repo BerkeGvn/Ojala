@@ -13,7 +13,7 @@
       >
         <div class="categories-container-img">
           <div class="img-1">
-            <img src="../../assets/images/home-chair-shop.png" alt="" />
+            <img src="/public/images/home-chair-shop.png" alt="" />
           </div>
         </div>
         <div class="categories-container-text categories-container-text-right">
@@ -38,7 +38,7 @@
         class="categories-container"
       >
         <div class="categories-container-img">
-          <div class="img-2"><img src="../../assets/images/home-table-shop.png" alt="" /></div>
+          <div class="img-2"><img src="/public/images/home-table-shop.png" alt="" /></div>
         </div>
         <div class="categories-container-text categories-container-text-right">
           <h3>Tables</h3>
@@ -62,7 +62,7 @@
         class="categories-container"
       >
         <div class="categories-container-img">
-          <div class="img-3"><img src="../../assets/images/home-sofa-shop.png" alt="" /></div>
+          <div class="img-3"><img src="/public/images/home-sofa-shop.png" alt="" /></div>
         </div>
         <div class="categories-container-text categories-container-text-left">
           <h3>Sofas</h3>
@@ -86,7 +86,7 @@
         class="categories-container"
       >
         <div class="categories-container-img">
-          <div class="img-4"><img src="../../assets/images/home-cabinet-shop.png" alt="" /></div>
+          <div class="img-4"><img src="/public/images/home-cabinet-shop.png" alt="" /></div>
         </div>
         <div class="categories-container-text categories-container-text-left">
           <h3>Cabinets</h3>

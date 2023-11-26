@@ -1,19 +1,19 @@
 <template>
   <div class="about-showcase">
     <div class="about-showcase-img about-showcase-img-1">
-      <img src="../../assets/images/about/about-showcase-1.jpg" alt="" srcset="" />
+      <img src="/public/images/about/about-showcase-1.jpg" alt="" srcset="" />
     </div>
     <div class="about-showcase-img about-showcase-img-2">
-      <img src="../../assets/images/about/about-showcase-2.jpg" alt="" srcset="" />
+      <img src="/public/images/about/about-showcase-2.jpg" alt="" srcset="" />
     </div>
     <div class="about-showcase-img about-showcase-img-3">
-      <img src="../../assets/images/about/about-showcase-3.jpg" alt="" srcset="" />
+      <img src="/public/images/about/about-showcase-3.jpg" alt="" srcset="" />
     </div>
     <div class="about-showcase-img about-showcase-img-4">
-      <img src="../../assets/images/about/about-showcase-4.jpg" alt="" srcset="" />
+      <img src="/public/images/about/about-showcase-4.jpg" alt="" srcset="" />
     </div>
     <div class="about-showcase-img about-showcase-img-5">
-      <img src="../../assets/images/about/about-showcase-5.jpg" alt="" srcset="" />
+      <img src="/public/images/about/about-showcase-5.jpg" alt="" srcset="" />
     </div>
   </div>
 </template>

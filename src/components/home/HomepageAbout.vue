@@ -5,7 +5,7 @@
         <picture>
           <source srcset="" />
           <img
-            src="../../assets/images/home-about-small-1.jpg"
+            src="/public/images/home-about-small-1.jpg"
             alt="a picture of a chair insside a room"
             class="test"
           />
@@ -15,7 +15,7 @@
         <picture>
           <source srcset="" />
           <img
-            src="../../assets/images/home-about-small-2.jpg"
+            src="/public/images/home-about-small-2.jpg"
             alt="a picture of chairs and table inside a kitchen"
           />
         </picture>

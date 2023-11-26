@@ -22,13 +22,13 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
-const videoSource = ref('src/assets/images/asd/mobile-video.mp4')
+const videoSource = ref('/public/images/video/mobile-video.mp4')
 
 const checkViewportWidth = () => {
   if (window.innerWidth > 1100) {
-    videoSource.value = 'src/assets/images/asd/desktop-video.mp4'
+    videoSource.value = '/public/video/desktop-video.mp4'
   } else {
-    videoSource.value = 'src/assets/images/asd/mobile-video.mp4'
+    videoSource.value = '/public/video/mobile-video.mp4'
   }
 }
 
