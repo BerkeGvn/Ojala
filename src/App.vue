@@ -1,5 +1,6 @@
 <template>
   <BaseNavbar></BaseNavbar>
+  <!-- @vue-ignore -->
   <RouterView :key="$route.params[$route.meta.watchParam]" />
 </template>
 
