@@ -126,7 +126,7 @@ function submitForm() {
       margin: 0 auto;
       border-radius: 1rem;
     }
-    background-image: url(../../assets/images/sub/sub-background.jpg);
+    background-image: url(../../../public/images/sub/sub-background.jpg);
     background-position: center;
     background-size: cover;
     margin: 4rem 0;

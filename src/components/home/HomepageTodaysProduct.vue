@@ -4,12 +4,8 @@
     <div class="today-product-container">
       <div class="today-product-container-background-img">
         <picture>
-          <source
-            srcset="../../assets/images/home-today-background.jpg"
-            media="(min-width:900px)"
-          />
           <img
-            src="../../assets/images/home-today-background.jpg"
+            src="/public/images/home-today-background.jpg"
             alt="picture of a black chair for a background image"
           />
         </picture>
