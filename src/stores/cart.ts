@@ -9,8 +9,8 @@ export const useCartStore = defineStore('cart', () => {
       price: 154,
       id: 'C35342',
       images: [
-        '/src/assets/images/products/chairs/duva-chair-1-small.png',
-        '/src/assets/images/products/chairs/duva-chair-2-medium.jpg'
+        'images/products/chairs/duva-chair-1-small.png',
+        'images/products/chairs/duva-chair-2-medium.jpg'
       ]
     }
   ])

@@ -15,8 +15,6 @@ let lenis: any
 onMounted(() => {
   lenis = new Lenis({
     smoothWheel: true
-    /*     smoothTouch: true,
-    touchMultiplier: 1 */
   })
 
   function raf(time: any) {
