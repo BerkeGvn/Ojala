@@ -4,7 +4,7 @@
       <div class="about-info-img-container about-info-img-container-1">
         <div class="about-info-img about-info-img-1">
           <img
-            src="/public/images/about/about-info-1.jpg"
+            src="/images/about/about-info-1.jpg"
             alt="picture of a cabinet that has painting and flowers top of it"
           />
         </div>
@@ -24,7 +24,7 @@
     <div class="about-info-2">
       <div class="about-info-img-container about-info-img-container-2">
         <div class="about-info-img about-info-img-2">
-          <img src="/public/images/about/about-info-2.jpg" alt="a orange sofa" />
+          <img src="/images/about/about-info-2.jpg" alt="a orange sofa" />
         </div>
       </div>
       <div class="about-info-container about-info-container-2">

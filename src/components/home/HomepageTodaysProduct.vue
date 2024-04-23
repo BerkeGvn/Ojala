@@ -5,7 +5,7 @@
       <div class="today-product-container-background-img">
         <picture>
           <img
-            src="/public/images/home-today-background.jpg"
+            src="/images/home-today-background.jpg"
             alt="picture of a black chair for a background image"
           />
         </picture>
