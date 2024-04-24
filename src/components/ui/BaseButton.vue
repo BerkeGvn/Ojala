@@ -75,6 +75,14 @@ button {
   &:active {
     transition: all 0.2s;
     scale: 1;
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
 
