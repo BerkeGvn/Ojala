@@ -108,5 +108,8 @@ function routeToLink() {
     top: 1rem;
     z-index: 5;
   }
+  &:hover {
+    background-color: #b4b2b2;
+  }
 }
 </style>
