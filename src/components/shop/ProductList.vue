@@ -89,7 +89,7 @@ function searchItem(keyword: string) {
   &-list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     &-error {
       display: block;
       text-align: center;
